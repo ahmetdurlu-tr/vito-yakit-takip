@@ -48,7 +48,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 </style><style>
 .chart-scroll{overflow-x:auto;overflow-y:hidden;max-width:100%;touch-action:pan-x;overscroll-behavior-x:contain;scrollbar-width:thin;cursor:grab}
 .chart-scroll.dragging{cursor:grabbing;user-select:none}
-.chart-scroll svg.chart{touch-action:none;max-width:none!important;height:250px!important;aspect-ratio:auto!important;display:block}
+.chart-scroll svg.chart{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:pan-x;max-width:none!important;height:250px!important;aspect-ratio:auto!important;display:block}
 .chart-pop{position:fixed;z-index:9999;left:50%;top:50%;transform:translate(-50%,-50%);width:min(340px,calc(100vw - 32px));background:#172a43;border:2px solid #77b5fa;box-shadow:0 14px 60px #000b;border-radius:16px;padding:19px;pointer-events:none;color:#f1f6ff}
 .chart-pop b{display:block;font-size:19px;margin-bottom:10px}.chart-pop div{margin:5px 0;font-size:15px}
 </style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V12</span></h1><small>Mercedes-Benz Vito 124 · 2024 · 70 L depo</small></div><span class="tag">● Yerel veri</span></header><main>
@@ -135,6 +135,7 @@ function setupChartInteractions(id,entries){
  if(holder.dataset.events==='1')return;holder.dataset.events='1';
  let down=null,dragged=false;
  holder.addEventListener('pointerdown',e=>{
+  if(e.pointerType==='touch')return;
   const g=e.target.closest?.('[data-chart-index]');
   down={x:e.clientX,y:e.clientY,left:holder.scrollLeft,pointer:e.pointerId,index:g?Number(g.dataset.chartIndex):-1};dragged=false;
   if(down.index>=0 || e.pointerType==='mouse'){try{holder.setPointerCapture(e.pointerId)}catch(_){}}
@@ -142,13 +143,29 @@ function setupChartInteractions(id,entries){
   if(down.index>=0)chartHoldTimer=setTimeout(()=>{if(down&&!dragged){const row=holder._entries[down.index];const all=derived();showChartPopup(row,all.findIndex(z=>z.id===row.id))}},3000);
  });
  holder.addEventListener('pointermove',e=>{
+  if(e.pointerType==='touch')return;
   if(!down)return;let dx=e.clientX-down.x,dy=e.clientY-down.y;
   if(Math.abs(dx)>8||Math.abs(dy)>8){dragged=true;closeChartPopup()}
   if(dragged){holder.scrollLeft=down.left-dx;if(e.cancelable)e.preventDefault()}
  });
  const finish=()=>{down=null;dragged=false;closeChartPopup()};
- holder.addEventListener('pointerup',finish);holder.addEventListener('pointercancel',finish);holder.addEventListener('lostpointercapture',finish);
- holder.addEventListener('scroll',()=>{if(down){dragged=true;closeChartPopup()}},{passive:true});
+ holder.addEventListener('pointerup',e=>{if(e.pointerType!=='touch')finish()});holder.addEventListener('pointercancel',e=>{if(e.pointerType!=='touch')finish()});holder.addEventListener('lostpointercapture',e=>{if(e.pointerType!=='touch')finish()});
+ let touchDown=null,touchMoved=false;
+ holder.addEventListener('touchstart',e=>{
+  if(e.touches.length!==1)return;
+  const t=e.touches[0],g=e.target.closest?.('[data-chart-index]');
+  touchDown={x:t.clientX,y:t.clientY,index:g?Number(g.dataset.chartIndex):-1};touchMoved=false;closeChartPopup();
+  if(touchDown.index>=0)chartHoldTimer=setTimeout(()=>{
+   if(touchDown&&!touchMoved){const row=holder._entries[touchDown.index];if(row){const all=derived();showChartPopup(row,all.findIndex(z=>z.id===row.id))}}
+  },3000);
+ },{passive:true});
+ holder.addEventListener('touchmove',e=>{
+  if(!touchDown)return;const t=e.touches[0];
+  if(!t||Math.abs(t.clientX-touchDown.x)>10||Math.abs(t.clientY-touchDown.y)>10){touchMoved=true;closeChartPopup()}
+ },{passive:true});
+ const endTouch=()=>{touchDown=null;touchMoved=false;closeChartPopup()};
+ holder.addEventListener('touchend',endTouch,{passive:true});holder.addEventListener('touchcancel',endTouch,{passive:true});
+ holder.addEventListener('scroll',()=>{if(touchDown){touchMoved=true;closeChartPopup()}if(down){dragged=true;closeChartPopup()}},{passive:true});
  holder.addEventListener('contextmenu',e=>e.preventDefault());
 }
 function labeledBars(id,labels,values,color,unit){let svg=$(id);if(!labels.length){svg.innerHTML='<text x="270" y="125" fill="#9ab0c9" text-anchor="middle">Kayıt yok</text>';return}let max=Math.max(1,...values.filter(Number.isFinite)),step=470/labels.length,w=Math.min(48,step*.76);svg.innerHTML='<line x1="40" y1="215" x2="520" y2="215" stroke="#506783"/>'+values.map((v,i)=>{if(!Number.isFinite(v))return '';let x=40+step*(i+.5),h=Math.max(3,v/max*174),y=215-h;let label=fmt(v,unit==='₺'?2:unit==='L'?1:unit==='L/100 km'?2:2);let inside=h>=52;return `<rect x="${x-w/2}" y="${y}" width="${w}" height="${h}" rx="4" fill="${color}"><title>${labels[i]}: ${fmt(v)} ${unit}</title></rect><text transform="translate(${x},${inside?y+10:y-6}) rotate(-90)" text-anchor="${inside?'end':'start'}" font-weight="700" font-size="${Math.min(15,Math.max(11,w*.35))}" fill="${inside?'#0b1b2b':'#eaf0fb'}">${label}</text><text x="${x}" y="234" text-anchor="middle" font-size="${labels.length>8?9:11}" fill="#b9cbe1">${labels[i]}</text>`}).join('')}
