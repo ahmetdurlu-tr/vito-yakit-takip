@@ -48,7 +48,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 </style><style>
 .chart-scroll{overflow-x:auto;overflow-y:hidden;max-width:100%;touch-action:pan-x;overscroll-behavior-x:contain;scrollbar-width:thin;cursor:grab}
 .chart-scroll.dragging{cursor:grabbing;user-select:none}
-.chart-scroll svg.chart{max-width:none!important;height:250px!important;aspect-ratio:auto!important;display:block}
+.chart-scroll svg.chart{touch-action:none;max-width:none!important;height:250px!important;aspect-ratio:auto!important;display:block}
 .chart-pop{position:fixed;z-index:9999;left:50%;top:50%;transform:translate(-50%,-50%);width:min(340px,calc(100vw - 32px));background:#172a43;border:2px solid #77b5fa;box-shadow:0 14px 60px #000b;border-radius:16px;padding:19px;pointer-events:none;color:#f1f6ff}
 .chart-pop b{display:block;font-size:19px;margin-bottom:10px}.chart-pop div{margin:5px 0;font-size:15px}
 </style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V12</span></h1><small>Mercedes-Benz Vito 124 · 2024 · 70 L depo</small></div><span class="tag">● Yerel veri</span></header><main>
@@ -137,14 +137,14 @@ function setupChartInteractions(id,entries){
  holder.addEventListener('pointerdown',e=>{
   const g=e.target.closest?.('[data-chart-index]');
   down={x:e.clientX,y:e.clientY,left:holder.scrollLeft,pointer:e.pointerId,index:g?Number(g.dataset.chartIndex):-1};dragged=false;
-  if(e.pointerType==='mouse'){holder.setPointerCapture(e.pointerId)}
+  if(down.index>=0 || e.pointerType==='mouse'){try{holder.setPointerCapture(e.pointerId)}catch(_){}}
   closeChartPopup();
   if(down.index>=0)chartHoldTimer=setTimeout(()=>{if(down&&!dragged){const row=holder._entries[down.index];const all=derived();showChartPopup(row,all.findIndex(z=>z.id===row.id))}},3000);
  });
  holder.addEventListener('pointermove',e=>{
   if(!down)return;let dx=e.clientX-down.x,dy=e.clientY-down.y;
   if(Math.abs(dx)>8||Math.abs(dy)>8){dragged=true;closeChartPopup()}
-  if(e.pointerType==='mouse'&&dragged){holder.scrollLeft=down.left-dx;e.preventDefault()}
+  if(dragged){holder.scrollLeft=down.left-dx;if(e.cancelable)e.preventDefault()}
  });
  const finish=()=>{down=null;dragged=false;closeChartPopup()};
  holder.addEventListener('pointerup',finish);holder.addEventListener('pointercancel',finish);holder.addEventListener('lostpointercapture',finish);
