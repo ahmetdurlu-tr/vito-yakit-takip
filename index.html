@@ -78,7 +78,7 @@ body.scanner-open{overflow:hidden}
 </style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V18</span></h1><small>Mercedes-Benz Vito 124 · 2024 · 70 L depo</small></div><span class="tag">● Yerel veri</span></header><main>
 <div id="status" role="status"></div>
 <details class="accordion" id="editor"><summary id="editorTitle">＋ Yeni Kayıt</summary><div class="accordion-body"><form id="recordForm">
-<section class="scan-section"><h3>1. Araç bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="vehicle" data-source="camera">ARAÇ OKU</button><button type="button" data-scan="vehicle" data-source="gallery">FOTO OKU</button></div><div class="formgrid"><div><label for="km"> T.Kilometre</label><input id="km" type="number" min="0" step="1" inputmode="numeric" required></div><div><label for="hours">Çalışma Süresi</label><input id="hours" inputmode="decimal" type="number" min="0" step="0.1" placeholder="Örn. 837"></div></div></section>
+<section class="scan-section"><h3>1. Araç bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="vehicle" data-source="camera">ARAÇ OKU</button><button type="button" data-scan="vehicle" data-source="gallery">FOTO OKU</button></div><div class="formgrid"><div><label for="km">T. Kilometre</label><input id="km" type="number" min="0" step="1" inputmode="numeric" required></div><div><label for="hours">Çalışma Süresi</label><input id="hours" inputmode="decimal" type="number" min="0" step="0.1" placeholder="Örn. 837"></div></div></section>
 <section class="scan-section"><h3>2. Yakıt bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="receipt" data-source="camera">FİŞ OKU</button><button type="button" data-scan="receipt" data-source="gallery">FOTO OKU</button></div><div class="formgrid"><div><label for="date">Dolum tarihi</label><input id="date" type="date" required></div><div><label for="liters">Alınan yakıt (L)</label><input id="liters" inputmode="decimal" type="number" min="0.01" max="70" step="0.001" required></div><div><label for="price">Litre fiyatı (TL)</label><input id="price" inputmode="decimal" type="number" min="0.01" step="0.0001" required></div><div><label for="total">Fiş toplamı (TL)</label><input id="total" inputmode="decimal" type="number" min="0.01" step="0.01"></div></div></section>
 <div class="notice"><label for="resetPeriod">Gösterge sayacı dönemi</label><select id="resetPeriod"><option value="0">İlk dönem — sayaç sıfırlanmadı</option></select><p class="smallnote">“Sıfırlama itibarıyla” kilometre/saat göstergesi sıfırlandıysa yeni dönem açın. Dönemler arasında ölçülmeyen mesafe hesaplanmaz.</p><button type="button" id="newResetPeriod">＋ Yeni sayaç dönemi aç</button></div><div id="scanStatus" class="smallnote" role="status" aria-live="polite"></div>
 <div id="scanImageWrap" class="scan-preview hidden"><h3>Seçilen görüntü</h3><img id="scanImage" alt="Okunacak fotoğraf" style="display:block;width:100%;max-height:320px;object-fit:contain;border-radius:9px"><p id="scanProgress" class="smallnote" role="status"></p></div>
@@ -119,10 +119,24 @@ async function fetchGeminiModels(key){
  models.push(...(data.models||[]).filter(m=>m.supportedGenerationMethods?.includes('generateContent')&&/gemini/i.test(m.name)).map(m=>m.name.replace(/^models\//,'')));
  page=data.nextPageToken||'';
  }while(page&&models.length<500);
- return preferredModels([...new Set(models)].filter(m=>/^gemini-(?:2\.0-flash(?:-lite)?|2\.5-flash(?:-lite)?|3-flash)(?:$|[-])/i.test(m)&&!/(?:pro|image-generation|tts|native-audio|preview)/i.test(m)));
+ return preferredModels([...new Set(models)].filter(m=>/^gemini-3(?:\.|-|$)/i.test(m)&&!/(?:image-generation|tts|native-audio)/i.test(m)));
 }
-function updateModelSelect(models){const sel=$('aiModel');const current=localStorage.getItem(aiModelName)||sel.value;sel.replaceChildren(new Option('Otomatik — erişilebilir modeli bul',''));for(const m of models)sel.add(new Option(m,m));sel.value=models.includes(current)?current:'';}
-async function resolveGeminiModel(key){const selected=localStorage.getItem(aiModelName)||'';const models=await fetchGeminiModels(key);if(!models.length)throw Error('Bu API anahtarıyla kullanılabilir Gemini modeli bulunamadı.');updateModelSelect(models);localStorage.setItem(aiModelCacheName,JSON.stringify(models));if(selected&&models.includes(selected))return selected;const model=models[0];localStorage.setItem(aiModelName,model);$('aiModel').value=model;return model;}
+function updateModelSelect(models){
+ const sel=$('aiModel'), saved=localStorage.getItem(aiModelName)||'';
+ sel.replaceChildren(new Option('— Gemini 3 modelini seçin —',''));
+ for(const m of models)sel.add(new Option(m,m));
+ if(saved&&!models.includes(saved))sel.add(new Option('⚠ Önceki seçim: '+saved+' (listede yok)',saved));
+ sel.value=saved||'';
+}
+async function resolveGeminiModel(key){
+ const selected=localStorage.getItem(aiModelName)||'';
+ if(!selected||!/^gemini-3(?:\.|-|$)/i.test(selected))throw Error('Gemini 3 modeli seçilmedi. İşlevler → Yapay Zekâ Ayarları → BAĞLANTIYI TEST ET ile modelleri yükleyin; Gemini 3 modelini seçip ANAHTARI KAYDET düğmesine basın.');
+ const models=await fetchGeminiModels(key);
+ if(!models.includes(selected))throw Error('Seçili model ('+selected+') API model listesinde bulunamadı. Başka modele otomatik geçilmeyecek. YZ Ayarları bölümünden kullanılabilir bir Gemini 3 modeli seçin.');
+ localStorage.setItem(aiModelCacheName,JSON.stringify(models));
+ updateModelSelect(models);
+ return selected;
+}
 
 let cameraStream=null,cameraType=null,scanBusy=false,cameraRequestId=0,scanImageUrl=null,scanSession=0,activeGalleryType=null;
 const scanStatus=t=>{ $('scanStatus').textContent=t;$('scanProgress').textContent=t;$('scannerState').textContent=t; };
@@ -154,7 +168,7 @@ async function analyzeImage(blob,type){
   }
  }catch(e){throw Error('Bağlantı hatası: '+e.message)}
  let data;try{data=await response.json()}catch(e){throw Error('YZ yanıtı okunamadı.')}
- if(!response.ok){if(response.status===429)throw Error('Ücretsiz kota veya hız sınırına ulaşıldı.');throw Error((data?.error?.message||'HTTP '+response.status).slice(0,260))}
+ if(!response.ok){if(response.status===429)throw Error('HTTP 429 — '+(data?.error?.message||'Kota veya hız sınırı; ayrıntı sağlanmadı.').slice(0,380));throw Error((data?.error?.message||'HTTP '+response.status).slice(0,260))}
  let raw=provider==='gemini'?data?.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join(''):data?.choices?.[0]?.message?.content;
  if(Array.isArray(raw))raw=raw.map(p=>p.text||'').join('');if(!raw)throw Error('Görüntüden bilgi döndürülmedi.');
  let obj;try{obj=JSON.parse(String(raw).replace(/^```(?:json)?\s*|\s*```$/g,'').trim())}catch(e){const match=String(raw).match(/\{[\s\S]*\}/);try{obj=JSON.parse(match?.[0]||'')}catch{throw Error('YZ yanıtı geçerli JSON değil.')}}return parseAI(type,obj)
@@ -173,18 +187,18 @@ function initAISettings(){
  const modelStorage=p=>p==='gemini'?aiModelName:'vito-ai-model-'+p;
  const keyStorage=p=>p==='gemini'?aiKeyName:p==='groq'?groqKey:routerKey;
  function refresh(){const p=prov.value;localStorage.setItem(providerKey,p);key.value=localStorage.getItem(keyStorage(p))||'';$('aiKeyLabel').textContent=p+' API anahtarı';sel.replaceChildren();
- if(p==='gemini'){sel.add(new Option('Otomatik — erişilebilir modeli bul',''));let models=[];try{models=JSON.parse(localStorage.getItem(aiModelCacheName)||'[]')}catch{}for(const m of models)sel.add(new Option(m,m));}
+ if(p==='gemini'){let models=[];try{models=JSON.parse(localStorage.getItem(aiModelCacheName)||'[]')}catch{}updateModelSelect(models);}
  if(p==='groq'){sel.add(new Option('Llama 4 Scout (ücretsiz kota)','meta-llama/llama-4-scout-17b-16e-instruct'));sel.add(new Option('Llama 4 Maverick (ücretsiz kota)','meta-llama/llama-4-maverick-17b-128e-instruct'));}
  if(p==='openrouter'){sel.add(new Option('Ücretsiz görüntü modeli seçin veya yazın',''));let cached=[];try{cached=JSON.parse(sessionStorage.getItem('vito-free-vision-models')||'[]')}catch{}for(const m of cached)sel.add(new Option(m,m));}
- sel.value=localStorage.getItem(modelStorage(p))||sel.options[0]?.value||'';
+ if(p!=='gemini')sel.value=localStorage.getItem(modelStorage(p))||sel.options[0]?.value||'';
  $('aiModelLabel').textContent=p==='openrouter'?'Model kimliği (:free ile bitmeli)':'Görüntü modeli';
  let manual=$('aiManualModel');if(!manual){manual=document.createElement('input');manual.id='aiManualModel';manual.placeholder='Örn: sağlayıcı/model:free';sel.insertAdjacentElement('afterend',manual);manual.onchange=()=>{if(prov.value==='openrouter'){const v=manual.value.trim();if(v&&!v.endsWith(':free')){status.textContent='Yalnızca :free modellerine izin verilir.';return}sel.replaceChildren(new Option(v||'Model girin',v));sel.value=v;localStorage.setItem(modelStorage('openrouter'),v)}}}
  manual.hidden=p!=='openrouter';manual.value=p==='openrouter'?localStorage.getItem(modelStorage(p))||'':'';status.textContent='';}
  prov.value=selectedProvider();prov.onchange=refresh;refresh();
- $('aiSave').onclick=()=>{const v=key.value.trim(),p=prov.value;if(!v){status.textContent='API anahtarı boş.';return}localStorage.setItem(keyStorage(p),v);localStorage.setItem(modelStorage(p),sel.value);status.textContent=p+' anahtarı kaydedildi. Aynı site ve tarayıcıda sürüm güncellense de korunur.'};
+ $('aiSave').onclick=()=>{const v=key.value.trim(),p=prov.value;if(!v){status.textContent='API anahtarı boş.';return}if(p==='gemini'&&(!sel.value||!/^gemini-3(?:\.|-|$)/i.test(sel.value))){status.textContent='Gemini 3 modelini seçin. Gemini 2.5 artık otomatik kullanılmayacak.';return}localStorage.setItem(keyStorage(p),v);localStorage.setItem(modelStorage(p),sel.value);status.textContent=p+' anahtarı kaydedildi. Aynı site ve tarayıcıda sürüm güncellense de korunur.'};
  $('aiDelete').onclick=()=>{const p=prov.value;localStorage.removeItem(keyStorage(p));key.value='';status.textContent=p+' anahtarı silindi.'};
  $('aiTest').onclick=async()=>{const p=prov.value,v=key.value.trim();if(!v){status.textContent='Önce API anahtarını girin.';return}status.textContent='Bağlantı denetleniyor…';$('aiTest').disabled=true;try{
- if(p==='gemini'){const models=await fetchGeminiModels(v);if(!models.length)throw Error('Model bulunamadı.');localStorage.setItem(aiModelCacheName,JSON.stringify(models));updateModelSelect(models);status.textContent='✓ Gemini bağlantısı başarılı. '+models.length+' model bulundu; ücretsiz kota garantisi değildir.';}
+ if(p==='gemini'){const models=await fetchGeminiModels(v);if(!models.length)throw Error('Model bulunamadı.');localStorage.setItem(aiModelCacheName,JSON.stringify(models));updateModelSelect(models);status.textContent='✓ Gemini bağlantısı başarılı. '+models.length+' Gemini 3 modeli listelendi. Modeli seçip ANAHTARI KAYDET düğmesine basın. Mevcut seçim değiştirilmedi; ücretsiz kota garantisi değildir.';}
  else{const endpoint=p==='groq'?'https://api.groq.com/openai/v1/models':'https://openrouter.ai/api/v1/models';const r=await fetch(endpoint,{headers:{Authorization:'Bearer '+v}});if(!r.ok)throw Error('HTTP '+r.status);const data=await r.json();const names=(data.data||[]).map(x=>x.id);if(p==='groq'&&!names.includes(sel.value))throw Error('Seçili görüntü modeli şu anda mevcut değil.');if(p==='openrouter'){const vision=(data.data||[]).filter(m=>m.id?.endsWith(':free')&&(m.architecture?.input_modalities?.includes('image')||m.architecture?.modality?.includes('image'))).map(m=>m.id);sessionStorage.setItem('vito-free-vision-models',JSON.stringify(vision));const current=sel.value;sel.replaceChildren(new Option('Ücretsiz görüntü modeli seçin',''));vision.forEach(m=>sel.add(new Option(m,m)));sel.value=vision.includes(current)?current:'';if(!vision.length)throw Error('Ücretsiz görüntü modeli bulunamadı.');}status.textContent='✓ Model listesine erişildi. Bu test görüntü yeteneğini ve ücretsiz kotayı doğrulamaz.';}
  }catch(e){status.textContent='Bağlantı başarısız: '+e.message}finally{$('aiTest').disabled=false}};
  sel.onchange=()=>localStorage.setItem(modelStorage(prov.value),sel.value);
