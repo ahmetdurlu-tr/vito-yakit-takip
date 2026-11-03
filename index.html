@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.32</title><style>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.33.6</title><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#eaf0fb;background:#0a1120;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}header{padding:23px max(20px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953;display:flex;justify-content:space-between;gap:12px;align-items:center}h1{font-size:23px;margin:0}small,.muted{color:#a2b3ca}main{max-width:1150px;margin:auto;padding:25px 16px 60px}.tag{font-size:12px;border-radius:20px;padding:6px 11px;background:#153a34;color:#a5efca}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card,.panel{background:#111f34;border:1px solid #263951;border-radius:16px;padding:20px}.metric{font-size:26px;font-weight:750;margin:9px 0 2px}.section{margin-top:20px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h2{font-size:17px;margin:0 0 18px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:17px}button,.filelabel{border:1px solid #36516e;border-radius:10px;background:#203450;color:#e9f2ff;padding:10px 13px;display:inline-block}button.primary{background:#3b83ed;border-color:#3b83ed;color:white}button.danger{background:#542b38;border-color:#6b3444}button:hover,.filelabel:hover{filter:brightness(1.16)}input,select{background:#0c192b;color:white;border:1px solid #38506c;border-radius:9px;padding:10px;width:100%;min-width:0}label{display:block;color:#b9cbe1;font-size:13px;margin-bottom:5px}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.formactions{display:flex;gap:9px;align-items:center;margin-top:16px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #27384e;font-size:13px;white-space:nowrap}th{color:#a5b7cd;font-weight:600}td button{padding:6px 9px;font-size:12px}.chart{width:100%;height:250px;display:block}.notice{background:#142c42;border:1px solid #2d5675;border-radius:12px;padding:13px;margin:14px 0;color:#c5dff6;font-size:13px}.foot{font-size:12px;color:#8ea3bc;margin-top:24px;line-height:1.6}.empty{padding:30px;text-align:center;color:#a9bbd0}.chartlegend{font-size:12px;color:#b9cbe1}.hidden{display:none!important}#status{min-height:20px;font-size:13px;color:#9ee6bb} @media(max-width:760px){header{padding:17px}h1{font-size:18px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.formgrid{grid-template-columns:repeat(2,1fr)}.metric{font-size:21px}.card,.panel{padding:15px}}@media(max-width:400px){.formgrid{grid-template-columns:1fr}.grid{gap:8px}.card{padding:12px}}
 details.accordion{margin-top:16px;background:#111f34;border:1px solid #263951;border-radius:16px;overflow:hidden}details.accordion>summary{cursor:pointer;list-style:none;padding:17px 20px;font-weight:650;font-size:17px;display:flex;justify-content:space-between;align-items:center}details.accordion>summary::-webkit-details-marker{display:none}details.accordion>summary::after{content:'⌄';font-size:24px;color:#9fc4f5;transition:transform .2s}details.accordion[open]>summary::after{transform:rotate(180deg)}details.accordion[open]>summary{border-bottom:1px solid #263951}details.accordion>.accordion-body{padding:17px 18px}details.accordion .panel{border:0;background:transparent;padding:0}details.accordion .two .panel{background:#14243a;border:1px solid #263951;border-radius:12px;padding:15px}details.accordion .section{margin-top:0}details.accordion .grid{margin:0}details.accordion .scroll{margin-top:15px}details.accordion .accordion-note{font-size:12px;color:#a2b3ca;font-weight:400}@media(max-width:760px){details.accordion>summary{padding:15px}details.accordion>.accordion-body{padding:14px}}
 
@@ -101,7 +101,7 @@ body.scanner-open{overflow:hidden}
 #cameraPanel.gallery-mode .scanner-camera{flex:1 1 55vh;max-height:65vh}
 #galleryZoomHint{display:none;text-align:center;font-size:13px;color:#c6e4f7}
 #cameraPanel.gallery-mode:not(.ai-has-result) #galleryZoomHint{display:block}
-/* V18.32: CSS içinde yanlışlıkla kalan style etiketi kaldırıldı. */
+/* V18.33: CSS içinde yanlışlıkla kalan style etiketi kaldırıldı. */
 .record-save-error{background:#471b22;color:#fff;border:2px solid #ff4545;border-radius:10px;padding:12px;margin:12px 0;font-weight:750}#saveRecord.duplicate-record{opacity:1!important;cursor:not-allowed;background:#ff202f!important;border-color:#ff8088!important;color:white!important;box-shadow:0 0 0 3px rgba(255,45,65,.25),0 0 18px rgba(255,30,45,.45);font-weight:900}
 .counter-protection-drawer{margin:15px 0;border:1px solid #536b80;border-radius:14px;background:#14283a;overflow:hidden}.counter-protection-drawer>summary{padding:16px;font-size:1.1em;font-weight:800;cursor:pointer}.counter-protection-content{padding:12px}.counter-period-card{padding:15px;margin:10px 0;border:1px solid #5e788a;border-radius:12px;background:#102134}.counter-period-card.active{border-color:#43b889;background:#12352d}.counter-period-card h4{margin:0 0 10px;font-size:1em}.counter-period-values{display:grid;grid-template-columns:1fr 1fr;gap:10px}.counter-period-values>div{padding:10px;border-radius:9px;background:#0b1b2b;min-width:0}.counter-period-values small{display:block;color:#a9becb}.counter-period-values strong{display:block;font-size:clamp(16px,4vw,24px);overflow-wrap:anywhere}.counter-protection-drawer #counterArchive{margin-top:12px}.counter-protection-drawer #counterArchive>summary{padding:12px;cursor:pointer;font-weight:700}.counter-page-controls{display:flex;align-items:center;justify-content:space-between;gap:8px}.counter-page-controls button{min-width:0;font-size:13px;padding:8px}.counter-page-controls span{font-size:13px}.counter-page-controls[hidden],#counterArchive[hidden]{display:none!important}
 .tools-drawer{margin-top:14px!important}.tools-drawer>.accordion-body{padding:12px!important}.tools-drawer .ai-settings{margin:0}.tools-drawer .toolbar{margin-top:0}#actions .tools-drawer>summary{font-size:clamp(17px,calc(17px * var(--vito-scale)),22px);min-height:58px}
@@ -113,11 +113,195 @@ body.scanner-open{overflow:hidden}
 .motor-summary-grid strong{display:block;font-size:clamp(15px,3.6vw,20px);overflow-wrap:anywhere}
 @media(min-width:800px){#lastStory,.fuel-detail>.story{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:390px){.motor-summary-grid{grid-template-columns:1fr}}
-</style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V18.32</span></h1><small>Mercedes-Benz Vito 124 · 2024 · <br>Depo 70 L</small></div><span class="tag">● Y.Veri</span></header><main>
+
+/* V18.33 / Adım 1: Mobil yazı hiyerarşisi ve isteğe bağlı açıklamalar.
+   Yalnızca mevcut bilgi kartı görünümüne etki eder; iş mantığına dokunmaz. */
+:root{--vito-ui-body:clamp(14px,calc(14px * var(--vito-scale)),18px);--vito-ui-label:clamp(13px,calc(13px * var(--vito-scale)),17px);--vito-ui-title:clamp(16px,calc(16px * var(--vito-scale)),21px)}
+.story-box{min-width:0;overflow-wrap:break-word}
+.story-box h3{font-size:var(--vito-ui-title);line-height:1.35;margin-bottom:10px}
+.story-number{font-size:clamp(21px,calc(23px * var(--vito-scale)),29px);line-height:1.2;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.story-prev,.story-mini,.story-reason,.story-line,.story-inline{font-size:var(--vito-ui-body);line-height:1.5}
+.story-mini strong,.story-line strong{font-size:inherit}
+.story-reason{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 10px}
+.story-reason span{min-width:0;flex:1 1 140px}
+.story-reason b{font-size:var(--vito-ui-body);white-space:nowrap;font-variant-numeric:tabular-nums}
+.motor-summary-grid small{font-size:var(--vito-ui-label);line-height:1.3}
+.motor-summary-grid strong{font-size:clamp(16px,calc(17px * var(--vito-scale)),22px);line-height:1.3;font-variant-numeric:tabular-nums}
+.story-help{margin-top:10px;max-width:100%;font-size:var(--vito-ui-label)}
+.story-help>summary{display:inline-flex;align-items:center;gap:5px;list-style:none;cursor:pointer;color:#a9d3ff;border:1px solid #355874;border-radius:8px;padding:7px 10px;min-height:36px;font-weight:650;touch-action:manipulation}
+.story-help>summary::-webkit-details-marker{display:none}
+.story-help>summary:focus-visible{outline:2px solid #92c5ff;outline-offset:2px}
+.story-help[open]>summary{background:#18334d}
+.story-help .story-note{margin:8px 0 0;padding:8px 10px;border-left:2px solid #5890bb;background:#11283c;border-radius:5px;font-size:var(--vito-ui-label);line-height:1.5;color:#c0d4e8}
+@media(max-width:420px){.story-box{padding:12px}.story-reason{gap:6px}.story-reason b{white-space:normal;text-align:right}.story-line{padding:10px}.motor-summary-grid{gap:7px}}
+
+/* V18.33 Adım 2: Kartlarda önce sonuç, ardından açılabilir ayrıntı. */
+.story-more{margin-top:12px;border:1px solid #355169;background:#10283e;border-radius:10px;overflow:hidden}
+.story-more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px;font-size:var(--vito-ui-body);font-weight:650;color:#c4e0f5;min-height:44px;touch-action:manipulation}
+.story-more>summary::-webkit-details-marker{display:none}
+.story-more>summary span{transition:transform .18s;color:#9bb8d5;font-size:19px}
+.story-more[open]>summary span{transform:rotate(180deg)}
+.story-more>summary:focus-visible{outline:2px solid #92c5ff;outline-offset:-2px}
+.story-more-body{border-top:1px solid #355169;padding:11px 12px}
+.story-more-body .consumption-differences{margin:0}
+.story-more-body .story-reason:first-child{border-top:0}
+.story-box>.story-line{margin-top:10px}
+
+/* V18.33 Adım 3: Renkler yalnızca anlam bildirir, kartların kalıcı kategori renkleri Adım 10'a aittir. */
+:root{--vito-positive:#83ebbe;--vito-negative:#ffa0a9;--vito-estimate:#ffc66d;--vito-neutral:#c0d3e5}
+#lastStory .story-line.good,#lastStory .story-inline.good,
+.fuel-detail .story-line.good,.fuel-detail .story-inline.good{color:var(--vito-positive);background:#12392f;border-left:3px solid #46c799}
+#lastStory .story-line.bad,#lastStory .story-inline.bad,
+.fuel-detail .story-line.bad,.fuel-detail .story-inline.bad{color:var(--vito-negative);background:#3b202b;border-left:3px solid #ed7c8e}
+#lastStory .story-line.steady,#lastStory .story-inline.steady,
+.fuel-detail .story-line.steady,.fuel-detail .story-inline.steady{color:var(--vito-neutral);background:#213044;border-left:3px solid #849db7}
+#lastStory .story-line,.fuel-detail .story-line{padding-left:12px}
+#lastStory .reading-real,.fuel-detail .reading-real{color:var(--vito-positive)}
+#lastStory .reading-est,.fuel-detail .reading-est{color:var(--vito-estimate)}
+#lastStory .reading-unknown,.fuel-detail .reading-unknown{color:var(--vito-neutral)}
+#lastStory .effect-good,.fuel-detail .effect-good{color:var(--vito-positive)}
+#lastStory .effect-bad,.fuel-detail .effect-bad{color:var(--vito-negative)}
+#lastStory .effect-neutral,.fuel-detail .effect-neutral{color:var(--vito-neutral)}
+.last-heading-change.trend-good{color:var(--vito-positive)}
+.last-heading-change.trend-bad{color:var(--vito-negative)}
+.last-heading-change.trend-steady{color:var(--vito-neutral)}
+/* Eski gerçek/tahmini durum işaretlerinin anlamını da aynı renklere bağla. */
+.dot-real{background:var(--vito-positive);box-shadow:0 0 0 2px #83ebbe22}
+.dot-est{background:var(--vito-estimate);box-shadow:0 0 0 2px #ffc66d22}
+
+/* V18.33 Adım 4 — Son Dolum ve Yakıt Kayıtları ortak analiz kartı düzeni.
+   Bu kurallar hesaplama, veri, kayıt ve grafik işlevlerini değiştirmez. */
+#lastStory,.fuel-detail>.story{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:12px;
+  align-items:stretch;
+  min-width:0;
+}
+#lastStory>.story-box,.fuel-detail>.story>.story-box{
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  padding:15px;
+  border-radius:14px;
+  background:#0c2336;
+  border:1px solid #38546a;
+}
+#lastStory>.story-box>h3,.fuel-detail>.story>.story-box>h3{
+  margin:0 0 10px;
+  min-height:2.6em;
+  font-size:clamp(15px,3.8vw,18px);
+  font-weight:750;
+  line-height:1.3;
+  color:#dcecf9;
+  overflow-wrap:break-word;
+}
+#lastStory .story-number,.fuel-detail>.story .story-number{
+  font-size:clamp(22px,5.5vw,28px);
+  line-height:1.22;
+  letter-spacing:-.35px;
+  font-weight:800;
+  font-variant-numeric:tabular-nums;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+#lastStory .story-prev,.fuel-detail>.story .story-prev{
+  font-size:clamp(13px,3.2vw,15px);
+  line-height:1.5;
+}
+#lastStory .story-line,.fuel-detail>.story .story-line,
+#lastStory .story-inline,.fuel-detail>.story .story-inline{
+  font-size:clamp(13px,3.25vw,15px);
+  line-height:1.5;
+}
+#lastStory .motor-summary-grid,.fuel-detail>.story .motor-summary-grid{gap:9px;margin:10px 0}
+#lastStory .motor-summary-grid>div,.fuel-detail>.story .motor-summary-grid>div{min-width:0}
+#lastStory .story-more,.fuel-detail>.story .story-more{margin-top:12px}
+#lastStory .story-help,.fuel-detail>.story .story-help{margin-top:10px}
+@media(min-width:800px){
+  #lastStory,.fuel-detail>.story{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:420px){
+  #lastStory>.story-box,.fuel-detail>.story>.story-box{padding:12px}
+  #lastStory>.story-box>h3,.fuel-detail>.story>.story-box>h3{min-height:0}
+}
+
+/* V18.33 Adım 5 — Mobil genişlik ve hizalama güvenliği.
+   Yalnızca arayüz kuralları; hesaplama, kamera ve veri işleme değişmez. */
+#vehicle,#rows,#metrics,#driveMetrics,#economicMetrics,#yearSummary,
+#lastStory,.fuel-detail,.fuel-detail>.story{min-width:0;max-width:100%}
+#vehicle .hero,#vehicle .story-box,.fuel-detail .story-box,
+#metrics>.card,#driveMetrics>.mini,#economicMetrics>.mini,
+#yearSummary>div{min-width:0;max-width:100%}
+/* Sayılar ve birimleri tutarlı; tablo rakamları hizalı. */
+.story-number,.motor-summary-grid strong,.metric,.mini b,.heroitem b,.year-summary b{
+ font-variant-numeric:tabular-nums;line-height:1.25;
+}
+#lastStory .story-number,.fuel-detail>.story .story-number{
+ font-size:clamp(20px,5.2vw,28px);letter-spacing:-.025em;
+ overflow-wrap:normal;word-break:normal;
+}
+.story-box .story-reason{min-width:0}
+.story-box .story-reason>span{min-width:0;overflow-wrap:break-word}
+.story-box .story-reason>b{flex-shrink:0;font-variant-numeric:tabular-nums}
+/* S25 Ultra ve benzer genişliklerde, hesap değerleri kart dışına taşmaz. */
+@media(max-width:480px){
+ main{width:100%;max-width:100%;padding-inline:12px}
+ #vehicle .hero{padding:12px;margin:10px 0}
+ .story-box .story-reason{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;row-gap:3px;align-items:baseline}
+ .story-box .story-reason>b{max-width:100%;text-align:right;white-space:normal;overflow-wrap:anywhere}
+ .story-box .story-line,.story-box .story-inline,.story-more-body{overflow-wrap:break-word}
+ .fuel-detail{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:12px}
+ .fuel-detail>div{min-width:0}
+ #metrics,#yearSummary{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .herogrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .subgrid{grid-template-columns:minmax(0,1fr)}
+ .story-box .story-prev{overflow-wrap:break-word}
+}
+@media(max-width:365px){
+ #lastStory .story-number,.fuel-detail>.story .story-number{font-size:20px}
+ .motor-summary-grid{grid-template-columns:minmax(0,1fr)}
+ .story-box .story-reason{grid-template-columns:minmax(0,1fr)}
+ .story-box .story-reason>b{text-align:left}
+ .fuel-detail{grid-template-columns:minmax(0,1fr)}
+ .fuel-detail .actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* V18.33 Adım 6 — Yeni Kayıt için iki aşamalı, S25 Ultra uyumlu form.
+   Yalnızca #editor ve içindeki görsel düzen. Tarama/kayıt JS davranışı korunur. */
+#editor .accordion-body{padding:clamp(11px,3vw,18px)}
+#editor #recordForm{display:grid;gap:12px;min-width:0}
+#editor .scan-section{position:relative;min-width:0;margin:0;padding:clamp(12px,3vw,17px);background:#13263c;border:1px solid #37516b;border-left:3px solid #64a8ea;border-radius:14px}
+#editor .scan-section:nth-of-type(2){border-left-color:#d8b56a}
+#editor .scan-section h3{margin:0 0 12px;font-size:clamp(17px,4.4vw,21px);line-height:1.3;font-weight:750;color:#e5f0ff}
+#editor .scan-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0 0 13px}
+#editor .scan-buttons button{min-width:0;width:100%;padding:10px 5px;min-height:50px;font-size:clamp(12px,3.45vw,15px);line-height:1.25;font-weight:700;white-space:normal;overflow-wrap:normal;word-break:normal;background:#203b58;border-color:#466889}
+#editor .scan-buttons button[data-source="camera"]{background:#21517b;border-color:#4380b4}
+#editor .scan-buttons button:focus-visible{outline:3px solid #9bcaff;outline-offset:2px}
+#editor .scan-section .formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+#editor .scan-section .formgrid>div{min-width:0}
+#editor .scan-section .formgrid label{display:block;min-height:2.6em;margin:0 0 5px;font-size:clamp(13px,3.4vw,16px);line-height:1.3;color:#c5d7eb}
+#editor .scan-section .formgrid input{display:block;width:100%;min-width:0;min-height:49px;padding:10px 9px;font-size:clamp(16px,4.2vw,19px);font-variant-numeric:tabular-nums;background:#0b1c30;border-color:#40617f}
+#editor #entrySummary{margin:0;padding:12px 13px;font-size:clamp(13px,3.5vw,16px);line-height:1.5;border-radius:12px;overflow-wrap:break-word}
+#editor #scanStatus{min-width:0;font-size:clamp(13px,3.5vw,16px);line-height:1.5}
+#editor .formactions{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:10px;margin:0}
+#editor .formactions button{min-width:0;min-height:52px;font-size:clamp(14px,3.65vw,17px);padding:10px 6px;line-height:1.25}
+@media(max-width:360px){
+ #editor .scan-section{padding:10px}
+ #editor .scan-section .formgrid{gap:8px}
+ #editor .scan-buttons{gap:7px}
+ #editor .scan-buttons button{font-size:12px;padding-inline:3px}
+}
+@media(min-width:700px){
+ #editor .scan-section .formgrid label{min-height:0}
+ #editor .scan-buttons button{font-size:15px}
+}
+</style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V18.33.6</span></h1><small>Mercedes-Benz Vito 124 · 2024 · <br>Depo 70 L</small></div><span class="tag">● Y.Veri</span></header><main>
 <div id="status" role="status"></div>
 <details class="accordion" id="editor"><summary id="editorTitle">＋ Yeni Kayıt</summary><div class="accordion-body"><form id="recordForm">
-<section class="scan-section"><h3>1. Araç bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="vehicle" data-source="camera">ARAÇ OKU</button><button type="button" data-scan="vehicle" data-source="gallery">A.FOTO OKU</button></div><div class="formgrid"><div><label for="km">T. Kilometre</label><input id="km" type="number" min="0" step="1" inputmode="numeric" required></div><div><label for="hours">Çalışma Süresi</label><input id="hours" inputmode="decimal" type="number" min="0" step="0.1" placeholder="Örn. 837"></div></div></section>
-<section class="scan-section"><h3>2. Yakıt bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="receipt" data-source="camera">FİŞ OKU</button><button type="button" data-scan="receipt" data-source="gallery">F.FOTO OKU</button></div><div class="formgrid"><div><label for="date">Dolum tarihi</label><input id="date" type="date" required></div><div><label for="liters">Alınan yakıt (L)</label><input id="liters" inputmode="decimal" type="number" min="0.01" max="70" step="0.001" required></div><div><label for="price">Litre fiyatı (TL)</label><input id="price" inputmode="decimal" type="number" min="0.01" step="0.0001" required></div><div><label for="total">Fiş toplamı (TL)</label><input id="total" inputmode="decimal" type="number" min="0.01" step="0.01"></div></div></section>
+<section class="scan-section"><h3>1. Araç bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="vehicle" data-source="camera">KAMERADAN OKU</button><button type="button" data-scan="vehicle" data-source="gallery">FOTOĞRAFTAN OKU</button></div><div class="formgrid"><div><label for="km">Gösterge kilometresi</label><input id="km" type="number" min="0" step="1" inputmode="numeric" required></div><div><label for="hours">Motor çalışma süresi (sa)</label><input id="hours" inputmode="decimal" type="number" min="0" step="0.1" placeholder="Örn. 837"></div></div></section>
+<section class="scan-section"><h3>2. Yakıt bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="receipt" data-source="camera">KAMERADAN OKU</button><button type="button" data-scan="receipt" data-source="gallery">FOTOĞRAFTAN OKU</button></div><div class="formgrid"><div><label for="date">Dolum tarihi</label><input id="date" type="date" required></div><div><label for="liters">Yakıt miktarı (L)</label><input id="liters" inputmode="decimal" type="number" min="0.01" max="70" step="0.001" required></div><div><label for="price">Litre fiyatı (TL)</label><input id="price" inputmode="decimal" type="number" min="0.01" step="0.0001" required></div><div><label for="total">Ödenen tutar (TL)</label><input id="total" inputmode="decimal" type="number" min="0.01" step="0.01"></div></div></section>
 <select id="resetPeriod" class="hidden" aria-label="Dahili sayaç sıfırlama numarası"><option value="0">İlk sıfırlama öncesi</option></select><div id="scanStatus" class="smallnote" role="status" aria-live="polite"></div>
 <div id="scanImageWrap" class="scan-preview hidden"><h3>Seçilen görüntü</h3><img id="scanImage" alt="Okunacak fotoğraf" style="display:block;width:100%;max-height:320px;object-fit:contain;border-radius:9px"><p id="scanProgress" class="smallnote" role="status"></p></div>
 <div id="cameraPanel" class="scan-preview hidden" role="dialog" aria-modal="true" aria-label="Canlı kamera taraması"><div class="scanner-head"><h3 id="scannerTitle">Canlı tarama</h3><button type="button" id="closeCamera" aria-label="Tarama ekranını kapat">✕ KAPAT</button></div><div id="scannerState" role="status" aria-live="polite">● Kamera hazırlanıyor</div><div class="scanner-camera"><video id="cameraVideo" autoplay muted playsinline></video><img id="galleryFullscreen" class="hidden" alt="Seçilen fotoğraf" style="width:100%;height:100%;object-fit:contain"><div class="scanner-guide">Bilgileri çerçeve içine yerleştirin</div></div><div id="galleryZoomHint">İki parmakla büyütün · Tek parmakla kaydırın · Kadrajı YZ ile tarayın</div><div class="scan-actions"><button type="button" id="takePhoto" class="primary">✨ YZ İLE TARA</button></div><div id="scannerResults" aria-live="polite"><h4>Tarama sonuçları</h4><div id="scannerFields">Henüz tarama yapılmadı.</div></div><details class="scanner-settings"><summary>Kamera seçimi</summary><label for="cameraSelect">Kullanılacak kamera</label><select id="cameraSelect"></select><p id="cameraHint" class="smallnote"></p></details></div><div id="scanPreview" class="scan-preview hidden" aria-live="polite"></div>
@@ -398,7 +582,7 @@ function commonMotorCard(x,motorEst){
  const cumulative=Number.isFinite(x?.cumulativeHours)?fmt(x.cumulativeHours,1)+' sa ✓':Number.isFinite(motorEst?.cumulative)?'≈ '+fmt(motorEst.cumulative,1)+' sa':'—';
  const interval=Number.isFinite(motorEst?.interval)?(motorEst.quality==='measured'?fmt(motorEst.interval,1)+' sa ✓':'≈ '+fmt(motorEst.interval,1)+' sa'):'—';
  const speed=x?.distance>0&&motorEst?.interval>0?(motorEst.quality==='measured'?fmt(x.distance/motorEst.interval)+' km/sa ✓':'≈ '+fmt(x.distance/motorEst.interval)+' km/sa'):'—';
- return `<div class="story-box"><h3>Motor ve Çalışma Bilgileri</h3><div class="motor-summary-grid"><div><small>Birikimli motor saati</small><strong>${cumulative}</strong></div><div><small>Dolumlar arası motor saati</small><strong>${interval}</strong></div></div><div class="story-reason"><span>Ortalama çalışma hızı</span><b>${speed}</b></div><p class="story-note">≈ tahmini, ✓ gerçek ölçümdür. Dolum arası süre iki gerçek okuma yoksa tahminidir.</p></div>`;
+ return `<div class="story-box"><h3>Motor ve Çalışma Bilgileri</h3><div class="motor-summary-grid"><div><small>Birikimli motor saati</small><strong>${cumulative}</strong></div><div><small>Dolumlar arası motor saati</small><strong class="${Number.isFinite(motorEst?.interval)?motorEst.quality==='measured'?'reading-real':'reading-est':'reading-unknown'}">${interval}</strong></div></div><div class="story-reason"><span>Ortalama çalışma hızı</span><b class="${speed==='—'?'reading-unknown':motorEst?.quality==='measured'?'reading-real':'reading-est'}">${speed}</b></div><details class="story-help"><summary aria-label="Açıklamayı göster" title="Açıklama">ⓘ Açıklama</summary><p class="story-note">≈ tahmini, ✓ gerçek ölçümdür. Dolum arası süre iki gerçek okuma yoksa tahminidir.</p></details></div>`;
 }
 // V18.29: Karşılaştırılan dolum, kendi referans ortalamasına dahil edilmez.
 // Genel Özet ve yıl ortalamaları mevcut ağırlıklı hesaplarını kullanmaya devam eder.
@@ -411,8 +595,8 @@ function storyCompare(x,prev,avg,motorEst){
  if(!x?.distance)return '<div class="story-box">İlk kayıt başlangıç ölçümüdür; önceki dolumla karşılaştırılamaz.</div>'+commonMotorCard(x,motorEst);
  const a=comparable(x,prev),type=a?trend(a.delta):'steady';
  const difference=a?`<div class="story-line ${type}">${type==='good'?'🟢':type==='bad'?'🔴':'🟡'} 100 km’de <strong>${fmt(Math.abs(a.delta))} litre</strong> ${trendText(a.delta)} yakıt tüketildi.</div>`:'<div class="story-line steady">Önceki dolumla karşılaştırma için yeterli kayıt yok.</div>';
- const cost=a?`<div class="story-box"><h3>Kilometre maliyeti ve fark</h3><div class="story-group-title">Maliyet değişiminin nedenleri</div><div class="story-reason"><span>Yakıt tüketimindeki değişimin etkisi</span><b>${signed(a.driving,2,'₺/km')}</b></div><div class="story-reason"><span>Litre fiyatındaki değişimin etkisi</span><b>${signed(a.pricing,2,'₺/km')}</b></div><p class="story-note">İki etkinin toplamı kilometre maliyeti farkını verir. Önceki dolumun litre fiyatı esas alınır.</p></div>`:'';
- const general=Number.isFinite(avg)&&avg>0?`<div class="story-box"><h3>Aracın diğer dolumlarına göre</h3><div class="story-mini">Diğer dolumların mesafeye göre ağırlıklı ortalaması: <strong>${fmt(avg)} L/100 km</strong></div><div class="story-inline ${trend(x.consumption-avg)}">100 km’de <strong>${fmt(Math.abs(x.consumption-avg))} litre ${trendText(x.consumption-avg)}</strong> tüketildi.</div><p class="story-note">Bu dolumun litre fiyatıyla hesaplanan tüketim farkı: <strong>${signed((x.consumption-avg)*(x.total/x.liters)/100,2,'₺/km')}</strong>. Bu, gerçekleşmiş ek harcama değil; aynı fiyatla karşılaştırmadır.</p></div>`:'';
+ const cost=a?`<div class="story-box"><h3>Kilometre maliyeti ve fark</h3><div class="story-number">${fmt(a.nowCost)} ₺/km</div><div class="story-prev">Önceki: ${fmt(a.oldCost)} ₺/km</div><div class="story-line ${trend(a.total)}">${a.total>0?'↑':a.total<0?'↓':'—'} ${signed(a.total,2,'₺/km')} fark</div><details class="story-more"><summary>Maliyetin nedenleri <span aria-hidden="true">⌄</span></summary><div class="story-more-body"><div class="story-reason"><span>Yakıt tüketimindeki değişimin etkisi</span><b class="${a.driving>0?'effect-bad':a.driving<0?'effect-good':'effect-neutral'}">${signed(a.driving,2,'₺/km')}</b></div><div class="story-reason"><span>Litre fiyatındaki değişimin etkisi</span><b class="${a.pricing>0?'effect-bad':a.pricing<0?'effect-good':'effect-neutral'}">${signed(a.pricing,2,'₺/km')}</b></div><details class="story-help"><summary aria-label="Açıklamayı göster" title="Açıklama">ⓘ Açıklama</summary><p class="story-note">İki etkinin toplamı kilometre maliyeti farkını verir. Önceki dolumun litre fiyatı esas alınır.</p></details></div></details></div>`:'';
+ const general=Number.isFinite(avg)&&avg>0?`<div class="story-box"><h3>Aracın diğer dolumlarına göre</h3><div class="story-number">${fmt(avg)} L/100 km</div><div class="story-prev">Diğer dolumların ağırlıklı ortalaması</div><div class="story-inline ${trend(x.consumption-avg)}">100 km’de <strong>${fmt(Math.abs(x.consumption-avg))} litre ${trendText(x.consumption-avg)}</strong> tüketildi.</div><details class="story-help"><summary aria-label="Açıklamayı göster" title="Açıklama">ⓘ Açıklama</summary><p class="story-note">Ortalama mesafeye göre ağırlıklıdır ve bu dolumu içermez. Bu dolumun litre fiyatıyla hesaplanan tüketim farkı: <strong>${signed((x.consumption-avg)*(x.total/x.liters)/100,2,'₺/km')}</strong>. Bu, gerçekleşmiş ek harcama değil; aynı fiyatla karşılaştırmadır.</p></details></div>`:'';
  // İki dolumun aynı mesafede oluşturacağı fark: yuvarlanmamış oranlarla hesaplanır.
  const consumptionDetails=a?(()=>{
   const literDifference=a.delta*x.distance/100;
@@ -423,10 +607,10 @@ function storyCompare(x,prev,avg,motorEst){
    <div><strong>${fmt(x.distance,0)} km'de ${fmt(Math.abs(literDifference))} litre ${literDifference>0?'fazla':literDifference<0?'daha az':'fark olmadan'} yakıt tüketildi.</strong></div>
    <div><strong>Kilometrede ${fmt(Math.abs(a.total))} TL ${perKmDirection}.</strong></div>
    <div><strong>${fmt(x.distance,0)} km'de ${fmt(Math.abs(costDifference))} TL ${totalDirection}.</strong></div>
-   <div class="story-note">TL karşılaştırması, önceki ve mevcut dolumun kilometre maliyetlerini içerir; yakıt fiyatı değişimi de hesaba katılır.</div>
+   <details class="story-help"><summary aria-label="Açıklamayı göster" title="Açıklama">ⓘ Açıklama</summary><div class="story-note">TL karşılaştırması, önceki ve mevcut dolumun kilometre maliyetlerini içerir; yakıt fiyatı değişimi de hesaba katılır.</div></details>
   </div>`;
  })():'';
- const consumption=`<div class="story-box"><h3>Yakıt tüketimi</h3><div class="story-number">${fmt(x.consumption)} L/100 km</div><div class="story-prev">${a?'Önceki: '+fmt(a.p)+' L/100 km':'Önceki dolum bilgisi yok'}</div>${difference}${consumptionDetails}</div>`;
+ const consumption=`<div class="story-box"><h3>Yakıt tüketimi</h3><div class="story-number">${fmt(x.consumption)} L/100 km</div><div class="story-prev">${a?'Önceki: '+fmt(a.p)+' L/100 km':'Önceki dolum bilgisi yok'}</div>${difference}${consumptionDetails?`<details class="story-more"><summary>Ayrıntılı karşılaştırma <span aria-hidden="true">⌄</span></summary><div class="story-more-body">${consumptionDetails}</div></details>`:''}</div>`;
  return `${consumption}${cost}${general}${commonMotorCard(x,motorEst)}`;
 }
 
