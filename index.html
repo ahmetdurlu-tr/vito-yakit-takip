@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.33.12</title><style>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.33.12.1</title><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#eaf0fb;background:#0a1120;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}header{padding:23px max(20px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953;display:flex;justify-content:space-between;gap:12px;align-items:center}h1{font-size:23px;margin:0}small,.muted{color:#a2b3ca}main{max-width:1150px;margin:auto;padding:25px 16px 60px}.tag{font-size:12px;border-radius:20px;padding:6px 11px;background:#153a34;color:#a5efca}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card,.panel{background:#111f34;border:1px solid #263951;border-radius:16px;padding:20px}.metric{font-size:26px;font-weight:750;margin:9px 0 2px}.section{margin-top:20px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h2{font-size:17px;margin:0 0 18px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:17px}button,.filelabel{border:1px solid #36516e;border-radius:10px;background:#203450;color:#e9f2ff;padding:10px 13px;display:inline-block}button.primary{background:#3b83ed;border-color:#3b83ed;color:white}button.danger{background:#542b38;border-color:#6b3444}button:hover,.filelabel:hover{filter:brightness(1.16)}input,select{background:#0c192b;color:white;border:1px solid #38506c;border-radius:9px;padding:10px;width:100%;min-width:0}label{display:block;color:#b9cbe1;font-size:13px;margin-bottom:5px}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.formactions{display:flex;gap:9px;align-items:center;margin-top:16px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #27384e;font-size:13px;white-space:nowrap}th{color:#a5b7cd;font-weight:600}td button{padding:6px 9px;font-size:12px}.chart{width:100%;height:250px;display:block}.notice{background:#142c42;border:1px solid #2d5675;border-radius:12px;padding:13px;margin:14px 0;color:#c5dff6;font-size:13px}.foot{font-size:12px;color:#8ea3bc;margin-top:24px;line-height:1.6}.empty{padding:30px;text-align:center;color:#a9bbd0}.chartlegend{font-size:12px;color:#b9cbe1}.hidden{display:none!important}#status{min-height:20px;font-size:13px;color:#9ee6bb} @media(max-width:760px){header{padding:17px}h1{font-size:18px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.formgrid{grid-template-columns:repeat(2,1fr)}.metric{font-size:21px}.card,.panel{padding:15px}}@media(max-width:400px){.formgrid{grid-template-columns:1fr}.grid{gap:8px}.card{padding:12px}}
 details.accordion{margin-top:16px;background:#111f34;border:1px solid #263951;border-radius:16px;overflow:hidden}details.accordion>summary{cursor:pointer;list-style:none;padding:17px 20px;font-weight:650;font-size:17px;display:flex;justify-content:space-between;align-items:center}details.accordion>summary::-webkit-details-marker{display:none}details.accordion>summary::after{content:'⌄';font-size:24px;color:#9fc4f5;transition:transform .2s}details.accordion[open]>summary::after{transform:rotate(180deg)}details.accordion[open]>summary{border-bottom:1px solid #263951}details.accordion>.accordion-body{padding:17px 18px}details.accordion .panel{border:0;background:transparent;padding:0}details.accordion .two .panel{background:#14243a;border:1px solid #263951;border-radius:12px;padding:15px}details.accordion .section{margin-top:0}details.accordion .grid{margin:0}details.accordion .scroll{margin-top:15px}details.accordion .accordion-note{font-size:12px;color:#a2b3ca;font-weight:400}@media(max-width:760px){details.accordion>summary{padding:15px}details.accordion>.accordion-body{padding:14px}}
 
@@ -333,7 +333,7 @@ body.scanner-open{overflow:hidden}
 #actions .tools-drawer .toolbar{margin-top:0}
 @media(max-width:420px){#actions .tools-drawer>summary,#actions .counter-protection-drawer>summary{padding:12px 10px}#actions .tools-drawer>.accordion-body,#actions .counter-protection-content{padding:10px!important}}
 
-/* V18.33.12 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
+/* V18.33.12.1 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
 #driving .two.section>.panel,
 #driving .two.section .panel,
 #driving .two>.panel,
@@ -424,7 +424,7 @@ body.scanner-open{overflow:hidden}
 }
 
 
-/* V18.33.12 / Adım 10 — İşleve göre renk vurguları.
+/* V18.33.12.1 / Adım 10 — İşleve göre renk vurguları.
    Zeminler koyu ve ortak; başarı/uyarı/gerçek-tahmini durum renklerine dokunulmaz. */
 :root{
  --vito-accent-fuel:#60a5fa;
@@ -465,7 +465,7 @@ body.scanner-open{overflow:hidden}
 #metrics>.card,#driveMetrics>.mini,#economicMetrics>.mini{min-width:0;box-sizing:border-box}
 
 
-/* V18.33.12 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
+/* V18.33.12.1 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
    yearSummary kartlarına uygulanan kurallar, diğer kartlardan bağımsızdır. */
 #yearSummary.year-summary > div.summary-card{border-left-width:4px!important;border-left-style:solid!important;box-sizing:border-box;min-width:0}
 #yearSummary.year-summary > div.summary-distance{border-left-color:#53c7b2!important}
@@ -538,7 +538,7 @@ main > details.accordion > summary:focus-visible,
  .drawer-subtitle{font-size:12px}
 }
 
-/* V18.33.12 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
+/* V18.33.12.1 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
 .vito-svg-icon{width:21px;height:21px;display:inline-block;vertical-align:middle;flex:none;color:var(--drawer-accent,#75b4ff)}
 .drawer-title{display:flex;align-items:center;gap:10px}
 #editor>summary{gap:9px;align-items:center}
@@ -553,6 +553,25 @@ main > details.accordion > summary:focus-visible,
 #vehicle{border-left:4px solid var(--drawer-accent)!important}
 #vehicle>summary{display:flex;align-items:center;gap:10px;min-height:69px}
 #vehicle .vito-last-icon .vito-svg-icon{color:var(--drawer-accent)}
+/* V18.33.12.1 — Son Dolum simgesi sabit genişlikte; başlık sol hizalı; durum rengi ortak. */
+#vehicle > summary > .vito-last-icon{
+ display:inline-flex;align-items:center;justify-content:center;
+ flex:0 0 21px!important;width:21px;min-width:21px!important;max-width:21px;
+ color:var(--drawer-accent);
+}
+#vehicle > summary > #lastFuelHeading{
+ flex:1 1 0%!important;width:auto;min-width:0;
+ text-align:left!important;align-items:flex-start!important;
+ justify-content:center;margin:0;
+}
+#vehicle > summary > #lastFuelHeading > *{
+ text-align:left;align-self:flex-start;
+}
+#vehicle > summary > .vito-last-icon .vito-svg-icon{
+ color:var(--drawer-accent)!important;
+}
+#vehicle,#vehicle[open]{border-left-color:var(--drawer-accent)!important}
+
 #vehicle #lastFuelHeading{display:flex!important;flex-direction:column;gap:5px;min-width:0;flex:1;font-size:clamp(15px,calc(16px * var(--vito-scale)),20px);line-height:1.25}
 #vehicle .last-brief{font-size:clamp(13px,calc(14px * var(--vito-scale)),18px);color:#e7f1ff;font-weight:550;white-space:normal;overflow-wrap:break-word}
 #vehicle .last-extra{font-size:13px;line-height:1.6;color:#c6d7e9;margin-bottom:12px}
@@ -570,7 +589,7 @@ main > details.accordion > summary:focus-visible,
 .footer-help>summary::after{content:'⌄';float:right;color:#a9c7ee}
 .footer-help[open]>summary::after{content:'⌃'}
 .footer-help p{padding:0 15px 13px;margin:0;font-size:12px;line-height:1.65;color:#acc3d9}
-</style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V18.33.12</span></h1><small>Mercedes-Benz Vito 124 · 2024 · <br>Depo 70 L</small></div><span class="tag">● Y.Veri</span></header><main>
+</style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V18.33.12.1</span></h1><small>Mercedes-Benz Vito 124 · 2024 · <br>Depo 70 L</small></div><span class="tag">● Y.Veri</span></header><main>
 <div id="status" role="status"></div>
 <details class="accordion" id="editor"><summary id="editorTitle"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg> Yeni Kayıt</summary><div class="accordion-body"><form id="recordForm">
 <section class="scan-section"><h3>1. Araç bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="vehicle" data-source="camera">KAMERADAN OKU</button><button type="button" data-scan="vehicle" data-source="gallery">FOTOĞRAFTAN OKU</button></div><div class="formgrid"><div><label for="km">Gösterge kilometresi</label><input id="km" type="number" min="0" step="1" inputmode="numeric" required></div><div><label for="hours">Motor çalışma süresi (sa)</label><input id="hours" inputmode="decimal" type="number" min="0" step="0.1" placeholder="Örn. 837"></div></div></section>
