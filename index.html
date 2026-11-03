@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.33.12.3</title><style>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.33.12.4</title><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#eaf0fb;background:#0a1120;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}header{padding:23px max(20px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953;display:flex;justify-content:space-between;gap:12px;align-items:center}h1{font-size:23px;margin:0}small,.muted{color:#a2b3ca}main{max-width:1150px;margin:auto;padding:25px 16px 60px}.tag{font-size:12px;border-radius:20px;padding:6px 11px;background:#153a34;color:#a5efca}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card,.panel{background:#111f34;border:1px solid #263951;border-radius:16px;padding:20px}.metric{font-size:26px;font-weight:750;margin:9px 0 2px}.section{margin-top:20px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h2{font-size:17px;margin:0 0 18px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:17px}button,.filelabel{border:1px solid #36516e;border-radius:10px;background:#203450;color:#e9f2ff;padding:10px 13px;display:inline-block}button.primary{background:#3b83ed;border-color:#3b83ed;color:white}button.danger{background:#542b38;border-color:#6b3444}button:hover,.filelabel:hover{filter:brightness(1.16)}input,select{background:#0c192b;color:white;border:1px solid #38506c;border-radius:9px;padding:10px;width:100%;min-width:0}label{display:block;color:#b9cbe1;font-size:13px;margin-bottom:5px}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.formactions{display:flex;gap:9px;align-items:center;margin-top:16px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #27384e;font-size:13px;white-space:nowrap}th{color:#a5b7cd;font-weight:600}td button{padding:6px 9px;font-size:12px}.chart{width:100%;height:250px;display:block}.notice{background:#142c42;border:1px solid #2d5675;border-radius:12px;padding:13px;margin:14px 0;color:#c5dff6;font-size:13px}.foot{font-size:12px;color:#8ea3bc;margin-top:24px;line-height:1.6}.empty{padding:30px;text-align:center;color:#a9bbd0}.chartlegend{font-size:12px;color:#b9cbe1}.hidden{display:none!important}#status{min-height:20px;font-size:13px;color:#9ee6bb} @media(max-width:760px){header{padding:17px}h1{font-size:18px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.formgrid{grid-template-columns:repeat(2,1fr)}.metric{font-size:21px}.card,.panel{padding:15px}}@media(max-width:400px){.formgrid{grid-template-columns:1fr}.grid{gap:8px}.card{padding:12px}}
 details.accordion{margin-top:16px;background:#111f34;border:1px solid #263951;border-radius:16px;overflow:hidden}details.accordion>summary{cursor:pointer;list-style:none;padding:17px 20px;font-weight:650;font-size:17px;display:flex;justify-content:space-between;align-items:center}details.accordion>summary::-webkit-details-marker{display:none}details.accordion>summary::after{content:'⌄';font-size:24px;color:#9fc4f5;transition:transform .2s}details.accordion[open]>summary::after{transform:rotate(180deg)}details.accordion[open]>summary{border-bottom:1px solid #263951}details.accordion>.accordion-body{padding:17px 18px}details.accordion .panel{border:0;background:transparent;padding:0}details.accordion .two .panel{background:#14243a;border:1px solid #263951;border-radius:12px;padding:15px}details.accordion .section{margin-top:0}details.accordion .grid{margin:0}details.accordion .scroll{margin-top:15px}details.accordion .accordion-note{font-size:12px;color:#a2b3ca;font-weight:400}@media(max-width:760px){details.accordion>summary{padding:15px}details.accordion>.accordion-body{padding:14px}}
 
@@ -57,7 +57,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 #driving #scroll-dailyChart,#driving #scroll-hourChart{box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto!important;overflow-y:hidden!important}
 #driving #scroll-dailyChart>svg,#driving #scroll-hourChart>svg{max-width:none!important;display:block}
 
-/* V18.33.12.3 — Tarihe dayalı dolum karşılaştırma kartı. */
+/* V18.33.12.4 — Tarihe dayalı dolum karşılaştırma kartı. */
 .history-comparison{border:1px solid #38546a;background:#102238;border-radius:12px;padding:13px;min-width:0;color:#e3effa}
 .history-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .history-top strong{font-size:clamp(13px,calc(14px * var(--vito-scale)),18px)}
@@ -352,7 +352,7 @@ body.scanner-open{overflow:hidden}
 #actions .tools-drawer .toolbar{margin-top:0}
 @media(max-width:420px){#actions .tools-drawer>summary,#actions .counter-protection-drawer>summary{padding:12px 10px}#actions .tools-drawer>.accordion-body,#actions .counter-protection-content{padding:10px!important}}
 
-/* V18.33.12.3 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
+/* V18.33.12.4 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
 #driving .two.section>.panel,
 #driving .two.section .panel,
 #driving .two>.panel,
@@ -443,7 +443,7 @@ body.scanner-open{overflow:hidden}
 }
 
 
-/* V18.33.12.3 / Adım 10 — İşleve göre renk vurguları.
+/* V18.33.12.4 / Adım 10 — İşleve göre renk vurguları.
    Zeminler koyu ve ortak; başarı/uyarı/gerçek-tahmini durum renklerine dokunulmaz. */
 :root{
  --vito-accent-fuel:#60a5fa;
@@ -484,7 +484,7 @@ body.scanner-open{overflow:hidden}
 #metrics>.card,#driveMetrics>.mini,#economicMetrics>.mini{min-width:0;box-sizing:border-box}
 
 
-/* V18.33.12.3 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
+/* V18.33.12.4 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
    yearSummary kartlarına uygulanan kurallar, diğer kartlardan bağımsızdır. */
 #yearSummary.year-summary > div.summary-card{border-left-width:4px!important;border-left-style:solid!important;box-sizing:border-box;min-width:0}
 #yearSummary.year-summary > div.summary-distance{border-left-color:#53c7b2!important}
@@ -557,7 +557,7 @@ main > details.accordion > summary:focus-visible,
  .drawer-subtitle{font-size:12px}
 }
 
-/* V18.33.12.3 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
+/* V18.33.12.4 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
 .vito-svg-icon{width:21px;height:21px;display:inline-block;vertical-align:middle;flex:none;color:var(--drawer-accent,#75b4ff)}
 .drawer-title{display:flex;align-items:center;gap:10px}
 #editor>summary{gap:9px;align-items:center}
@@ -572,7 +572,7 @@ main > details.accordion > summary:focus-visible,
 #vehicle{border-left:4px solid var(--drawer-accent)!important}
 #vehicle>summary{display:flex;align-items:center;gap:10px;min-height:69px}
 #vehicle .vito-last-icon .vito-svg-icon{color:var(--drawer-accent)}
-/* V18.33.12.3 — Son Dolum simgesi sabit genişlikte; başlık sol hizalı; durum rengi ortak. */
+/* V18.33.12.4 — Son Dolum simgesi sabit genişlikte; başlık sol hizalı; durum rengi ortak. */
 #vehicle > summary > .vito-last-icon{
  display:inline-flex;align-items:center;justify-content:center;
  flex:0 0 21px!important;width:21px;min-width:21px!important;max-width:21px;
@@ -608,7 +608,121 @@ main > details.accordion > summary:focus-visible,
 .footer-help>summary::after{content:'⌄';float:right;color:#a9c7ee}
 .footer-help[open]>summary::after{content:'⌃'}
 .footer-help p{padding:0 15px 13px;margin:0;font-size:12px;line-height:1.65;color:#acc3d9}
-</style></head><body><header><div><h1>VITO <span style="color:#72b5ff">Yakıt Takip V18.33.12.3</span></h1><small>Mercedes-Benz Vito 124 · 2024 · <br>Depo 70 L</small></div><span class="tag">● Y.Veri</span></header><main>
+</style><style>
+/* V18.33.12.4 — sıkıştırılmış üst başlık ve araç profili */
+header.vito-topbar{display:block;padding:8px max(12px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953}
+.vehicle-profile{width:100%;max-width:1150px;margin:0 auto;background:transparent;border:0;overflow:visible}
+.vehicle-profile>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;min-height:37px;cursor:pointer;border-radius:9px;padding:5px 8px;background:#1b304a;border:1px solid #304c69;color:#eef5ff}
+.vehicle-profile>summary::-webkit-details-marker{display:none}
+.vehicle-profile>summary:focus-visible{outline:2px solid #8cc7ff;outline-offset:2px}
+.vehicle-brand{font-size:clamp(12px,3.5vw,15px);font-weight:700;letter-spacing:.05px;line-height:1.3;min-width:0}
+.vehicle-brand strong{color:#77bafa}
+.vehicle-software{font-size:clamp(10px,2.8vw,12px);font-weight:600;color:#a8bfd7;text-align:right;flex:none}
+.vehicle-profile[open]>summary{background:#244563;border-color:#5583a8}
+.vehicle-profile>summary::before{content:'+';display:inline-grid;place-items:center;color:#8fc2f4;font-size:19px;line-height:1;flex:none;width:17px}
+.vehicle-profile[open]>summary::before{content:'−'}
+.vehicle-profile-body{background:#111f34;border:1px solid #35516b;border-radius:0 0 13px 13px;padding:14px 13px 17px;max-height:min(78vh,900px);overflow-y:auto;overscroll-behavior:contain}
+.vehicle-profile-head h2{margin:0;font-size:clamp(17px,4vw,22px);line-height:1.3;color:#f0f6fe}
+.vehicle-profile-label{display:block;margin-top:4px;font-size:12px;color:#9fbedb}
+.vehicle-profile-section{margin-top:15px;padding-top:11px;border-top:1px solid #30455e;min-width:0}
+.vehicle-profile-section h3{margin:0 0 9px;font-size:15px;color:#9dcced}
+.vehicle-specs{margin:0;display:grid;gap:2px}
+.vehicle-specs>div{display:grid;grid-template-columns:minmax(110px,36%) minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid #ffffff0d;line-height:1.45}
+.vehicle-specs dt{font-size:12px;color:#9fb5cd}
+.vehicle-specs dd{margin:0;font-size:13px;color:#e6f1ff;overflow-wrap:anywhere}
+.vehicle-pressure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.vehicle-pressure-box{background:#162e46;border:1px solid #37526b;border-radius:10px;padding:11px;font-size:13px;line-height:1.65}
+.vehicle-pressure-box strong,.vehicle-pressure-box span{display:block}.vehicle-pressure-box strong{color:#e8f3ff}.vehicle-pressure-box span{font-size:11px;color:#a2bad1;margin:1px 0 7px}
+.vehicle-nested{margin-top:10px;background:#10283f;border:1px solid #37516b;border-radius:9px;padding:0}
+.vehicle-nested>summary{cursor:pointer;padding:10px 12px;font-size:13px;font-weight:650;color:#c7e2f4}
+.vehicle-nested ul{margin:2px 0 9px;padding-left:30px;font-size:12.5px;color:#dce9f5;line-height:1.65}
+.vehicle-nested p{margin:5px 12px 12px;font-size:12px;color:#e3c38d;line-height:1.45}
+.vehicle-steps{margin:0;padding-left:22px;font-size:13px;line-height:1.65;color:#ddebf7}
+.vehicle-equipment{margin:0}.vehicle-equipment>div{padding:9px 0;border-bottom:1px solid #ffffff15;line-height:1.5}
+.vehicle-equipment dt{font-size:13px;color:#b5d8f4;font-weight:700;margin-bottom:3px}.vehicle-equipment dd{margin:0;font-size:12.5px;color:#d4e4f4}
+.vehicle-profile-source a{color:#8ccfff;font-size:13px}
+.vehicle-disclaimer{font-size:12px;line-height:1.6;margin-top:16px;color:#f2d39c;background:#342b1f;padding:10px 12px;border:1px solid #80673c;border-radius:9px}
+.vehicle-build{font-size:11px;color:#a6bad1;text-align:right;margin:12px 0 0}
+@media(max-width:540px){.vehicle-pressure-grid{grid-template-columns:1fr}.vehicle-profile-body{padding:12px 10px}.vehicle-specs>div{grid-template-columns:minmax(98px,34%) minmax(0,1fr);gap:8px}}
+
+/* Açık ana ve alt çekmecelerde, kapanmayı belirginleştiren kırmızı kare/çarpı.
+   Pseudo element dekoratiftir; tüm summary yüzeyi tıklanabilir kalır. */
+main > details.accordion[open] > summary{background:#22425f!important;border-bottom:1px solid #497393!important}
+main > details.accordion[open] > summary::after,
+#actions .tools-drawer[open] > summary::after,
+#actions .counter-protection-drawer[open] > summary::after{
+ content:'×'!important;transform:none!important;display:inline-grid;place-items:center;
+ flex:0 0 27px;width:27px;height:27px;border-radius:7px;
+ background:#a82f45;color:#fff!important;border:1px solid #ea7182;
+ font-family:system-ui,sans-serif;font-size:23px!important;font-weight:700!important;line-height:1;
+ box-shadow:0 1px 7px #0005;vertical-align:middle
+}
+#actions .tools-drawer[open] > summary,
+#actions .counter-protection-drawer[open] > summary{background:#23445f!important;border-bottom:1px solid #497393!important}
+/* Kayıt kartlarında da sağdaki ok açıkken modern kırmızı kapatma simgesine dönüşür. */
+#rows .fuel-card[open] > summary{background:#203d59}
+#rows .fuel-card[open] .fuel-arrow{display:inline-grid;place-items:center;transform:none!important;color:transparent!important;font-size:0!important;background:#a82f45;border:1px solid #ea7182;border-radius:7px;width:27px;height:27px;flex:0 0 27px;position:relative}
+#rows .fuel-card[open] .fuel-arrow::after{content:'×';color:#fff;font-family:system-ui,sans-serif;font-size:23px;font-weight:700;line-height:1}
+.vehicle-profile[open]>summary::before{content:'×';color:white;font-size:20px;background:#a82f45;border:1px solid #ea7182;border-radius:6px;width:22px;height:22px}
+</style></head><body><header class="vito-topbar">
+<details class="vehicle-profile" id="vehicleProfile">
+<summary><span class="vehicle-brand">Mercedes <strong>VITO</strong> Yakıt Takip</span><span class="vehicle-software">Yazılım versiyonu 14.1</span></summary>
+<div class="vehicle-profile-body">
+ <div class="vehicle-profile-head"><h2>Mercedes-Benz Vito Tourer FLII 124 CDI</h2><span class="vehicle-profile-label">Araç Bilgileri</span></div>
+ <section class="vehicle-profile-section"><h3>Araç kimliği</h3><dl class="vehicle-specs">
+  <div><dt>Şasi numarası</dt><dd>W1VVNFFZ9S4427150</dd></div>
+  <div><dt>Üretim / model yılı</dt><dd>2024 çıkış · 2025 model standardı</dd></div>
+  <div><dt>Tip / model kodu</dt><dd>447.703 · Tourer SELECT / 124 VTS-L4X2 3200</dd></div>
+  <div><dt>Üretim yeri</dt><dd>Mercedes-Benz Vitoria Fabrikası, İspanya</dd></div>
+  <div><dt>Gövde / dingil mesafesi</dt><dd>Uzun gövde · 3.200 mm</dd></div>
+  <div><dt>Ağırlık varyantı</dt><dd>3.200 kg</dd></div>
+  <div><dt>Dış renk</dt><dd>Obsidyen Siyah Metalik · 9197 / 919U</dd></div>
+  <div><dt>İç döşeme / trim</dt><dd>Siyah suni deri (VU9) · Siyah ahşap ve piyano dekor (H15 / H16)</dd></div>
+ </dl></section>
+ <section class="vehicle-profile-section"><h3>Motor ve aktarma</h3><dl class="vehicle-specs">
+  <div><dt>Motor</dt><dd>OM 654.920 / OM654 DE 20 LA · 1.950 cc</dd></div>
+  <div><dt>Güç / tork</dt><dd>174 kW · 237 PS · 500 Nm</dd></div>
+  <div><dt>Şanzıman</dt><dd>9G-TRONIC · 9 ileri otomatik</dd></div>
+  <div><dt>Emisyon</dt><dd>Euro 6E RDE5</dd></div>
+  <div><dt>Yakıt deposu</dt><dd>70 litre</dd></div>
+  <div><dt>AdBlue</dt><dd>24 litre · ISO 22241-1</dd></div>
+ </dl></section>
+ <section class="vehicle-profile-section"><h3>Lastik basınçları</h3>
+ <div class="vehicle-pressure-grid">
+  <div class="vehicle-pressure-box"><strong>Kısmen yüklü</strong><span>Günlük şehir içi sürüş</span><div><b>Ön:</b> 3,3 bar · 48 PSI · 330 kPa</div><div><b>Arka:</b> 3,3 bar · 48 PSI · 330 kPa</div></div>
+  <div class="vehicle-pressure-box"><strong>Tam yüklü</strong><span>Yolcu ve bagaj / ağır yük</span><div><b>Ön:</b> 3,5 bar · 51 PSI · 350 kPa</div><div><b>Arka:</b> 4,4 bar · 64 PSI · 440 kPa</div></div>
+ </div></section>
+ <section class="vehicle-profile-section"><h3>Sıvılar ve bakım</h3><dl class="vehicle-specs">
+  <div><dt>Motor yağı miktarı</dt><dd>6,3–6,5 litre · MB 229.52 onayı</dd></div>
+  <div><dt>Fren balataları</dt><dd>Verilen tahmini aralık: 25.000–40.000 km</dd></div>
+  <div><dt>Fren diskleri</dt><dd>Verilen tahmini aralık: 60.000–80.000 km</dd></div>
+  <div><dt>Fren hidroliği</dt><dd>Her 2 yılda bir</dd></div>
+  <div><dt>Soğutma sıvısı</dt><dd>MB-Approval 325.5 veya 326.5 · Pembe/mor</dd></div>
+ </dl>
+ <details class="vehicle-nested"><summary>Motor yağı marka ve ürün örnekleri</summary><ul>
+ <li>Mercedes-AMG High Performance Engine Oil 229.52</li>
+ <li>Mobil 1 ESP 5W-30 / ESP Formula P 5W-30</li>
+ <li>Liqui Moly Top Tec 4600 5W-30</li>
+ <li>Shell Helix Ultra ECT C3 5W-30</li>
+ <li>Mercedes-Benz Genuine Engine Oil Fully Synthetic 229.52</li>
+ <li>Motul 8100 X-clean EFE 5W-30</li>
+ <li>Castrol EDGE 5W-30 C3</li>
+ </ul><p>Ürünlerin güncel MB-Approval onayını kullanmadan önce ambalajdan veya üretici onay listesinden kontrol edin.</p></details>
+ </section>
+ <section class="vehicle-profile-section"><h3>Akü takviyesi</h3><ol class="vehicle-steps"><li>Kırmızı (+) kabloyu kaput altındaki kırmızı kapaklı özel takviye noktasına bağlayın.</li><li>Siyah (−) kabloyu belirtilen şase bağlantı noktasına bağlayın.</li><li>İşlem öncesinde araç el kitabındaki takviye prosedürünü ve güvenlik sırasını kontrol edin.</li></ol></section>
+ <section class="vehicle-profile-section"><h3>Fabrika çıkışı donanım özeti</h3>
+ <dl class="vehicle-equipment">
+ <div><dt>Konfor ve gövde</dt><dd>Elektrikli bagaj ve iki yanda elektrikli kayar kapılar (P28 / W68 / T19 / T55 / T56); THERMOTRONIC ön klima (HH4); TEMPMATIC arka klima (HZ7); karartılmış arka camlar (W70); konfor süspansiyon (CF7)</dd></div>
+ <div><dt>Sürüş ve güvenlik</dt><dd>Aktif Fren Asistanı (BA3); Kör Nokta ve Aktif Şerit Takip (JA7 / JB4); geri görüş kameralı Park Paketi (JB7); Akıllı Hız Asistanı (JS2); ATTENTION ASSIST (JW8)</dd></div>
+ <div><dt>Aydınlatma ve multimedya</dt><dd>Multibeam LED farlar (L45); LED arka stoplar (LG4); MBUX ve telefon entegrasyonu (E7M / E4S); navigasyon hazırlığı (E7B); renkli gösterge paneli (JK5)</dd></div>
+ <div><dt>Koltuklar ve iç mekân</dt><dd>Konfor sürücü koltuğu / bel desteği (SB1 / SE5); ikili ön yolcu koltuğu (S23); katlanabilir 1. ve 2. sıra koltuklar (US4 / US5); kızaklı sökülebilir koltuk sistemi (UR1 / U3V)</dd></div>
+ <div><dt>Jant ve dış görünüm</dt><dd>17 inç 20 kollu hafif alaşım jantlar; 225/55 R17 lastikler (RK8 / RG7); krom ızgara ve gövde rengi tamponlar (FK2 / CM2); 2.500 kg römork kapasitesi ön hazırlığı (QA4)</dd></div>
+ </dl>
+ <p class="vehicle-profile-source"><a href="https://mb.vin/vin/402c3befdab263ff6f035c662600fff22/options/" target="_blank" rel="noopener noreferrer">Şasi numarasına ait donanım listesi</a></p>
+ </section>
+ <p class="vehicle-disclaimer">Bu bilgiler kullanıcı tarafından sağlanmıştır; fabrika bakım verileri olarak bağımsız doğrulanmamıştır. Özellikle lastik basıncı, yağ ve sıvı onayları, fren bakım aralıkları ve takviye işlemleri için aracın kendi etiketi, el kitabı ve Mercedes-Benz onayları esas alınmalıdır.</p>
+ <p class="vehicle-build">Teknik sürüm: V18.33.12.4</p>
+</div></details></header><main>
 <div id="status" role="status"></div>
 <details class="accordion" id="editor"><summary id="editorTitle"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg> Yeni Kayıt</summary><div class="accordion-body"><form id="recordForm">
 <section class="scan-section"><h3>1. Araç bilgileri</h3><div class="scan-buttons"><button type="button" data-scan="vehicle" data-source="camera">KAMERADAN OKU</button><button type="button" data-scan="vehicle" data-source="gallery">FOTOĞRAFTAN OKU</button></div><div class="formgrid"><div><label for="km">Gösterge kilometresi</label><input id="km" type="number" min="0" step="1" inputmode="numeric" required></div><div><label for="hours">Motor çalışma süresi (sa)</label><input id="hours" inputmode="decimal" type="number" min="0" step="0.1" placeholder="Örn. 837"></div></div></section>
