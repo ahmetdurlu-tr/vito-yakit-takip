@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.33.12.9</title><style>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V18.33.12.10</title><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#eaf0fb;background:#0a1120;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}header{padding:23px max(20px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953;display:flex;justify-content:space-between;gap:12px;align-items:center}h1{font-size:23px;margin:0}small,.muted{color:#a2b3ca}main{max-width:1150px;margin:auto;padding:25px 16px 60px}.tag{font-size:12px;border-radius:20px;padding:6px 11px;background:#153a34;color:#a5efca}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card,.panel{background:#111f34;border:1px solid #263951;border-radius:16px;padding:20px}.metric{font-size:26px;font-weight:750;margin:9px 0 2px}.section{margin-top:20px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h2{font-size:17px;margin:0 0 18px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:17px}button,.filelabel{border:1px solid #36516e;border-radius:10px;background:#203450;color:#e9f2ff;padding:10px 13px;display:inline-block}button.primary{background:#3b83ed;border-color:#3b83ed;color:white}button.danger{background:#542b38;border-color:#6b3444}button:hover,.filelabel:hover{filter:brightness(1.16)}input,select{background:#0c192b;color:white;border:1px solid #38506c;border-radius:9px;padding:10px;width:100%;min-width:0}label{display:block;color:#b9cbe1;font-size:13px;margin-bottom:5px}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.formactions{display:flex;gap:9px;align-items:center;margin-top:16px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #27384e;font-size:13px;white-space:nowrap}th{color:#a5b7cd;font-weight:600}td button{padding:6px 9px;font-size:12px}.chart{width:100%;height:250px;display:block}.notice{background:#142c42;border:1px solid #2d5675;border-radius:12px;padding:13px;margin:14px 0;color:#c5dff6;font-size:13px}.foot{font-size:12px;color:#8ea3bc;margin-top:24px;line-height:1.6}.empty{padding:30px;text-align:center;color:#a9bbd0}.chartlegend{font-size:12px;color:#b9cbe1}.hidden{display:none!important}#status{min-height:20px;font-size:13px;color:#9ee6bb} @media(max-width:760px){header{padding:17px}h1{font-size:18px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.formgrid{grid-template-columns:repeat(2,1fr)}.metric{font-size:21px}.card,.panel{padding:15px}}@media(max-width:400px){.formgrid{grid-template-columns:1fr}.grid{gap:8px}.card{padding:12px}}
 details.accordion{margin-top:16px;background:#111f34;border:1px solid #263951;border-radius:16px;overflow:hidden}details.accordion>summary{cursor:pointer;list-style:none;padding:17px 20px;font-weight:650;font-size:17px;display:flex;justify-content:space-between;align-items:center}details.accordion>summary::-webkit-details-marker{display:none}details.accordion>summary::after{content:'⌄';font-size:24px;color:#9fc4f5;transition:transform .2s}details.accordion[open]>summary::after{transform:rotate(180deg)}details.accordion[open]>summary{border-bottom:1px solid #263951}details.accordion>.accordion-body{padding:17px 18px}details.accordion .panel{border:0;background:transparent;padding:0}details.accordion .two .panel{background:#14243a;border:1px solid #263951;border-radius:12px;padding:15px}details.accordion .section{margin-top:0}details.accordion .grid{margin:0}details.accordion .scroll{margin-top:15px}details.accordion .accordion-note{font-size:12px;color:#a2b3ca;font-weight:400}@media(max-width:760px){details.accordion>summary{padding:15px}details.accordion>.accordion-body{padding:14px}}
 
@@ -57,7 +57,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 #driving #scroll-dailyChart,#driving #scroll-hourChart{box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto!important;overflow-y:hidden!important}
 #driving #scroll-dailyChart>svg,#driving #scroll-hourChart>svg{max-width:none!important;display:block}
 
-/* V18.33.12.9 — Tarihe dayalı dolum karşılaştırma kartı. */
+/* V18.33.12.10 — Tarihe dayalı dolum karşılaştırma kartı. */
 .history-comparison{border:1px solid #38546a;background:#102238;border-radius:12px;padding:13px;min-width:0;color:#e3effa}
 .history-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .history-top strong{font-size:clamp(13px,calc(14px * var(--vito-scale)),18px)}
@@ -76,7 +76,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 .history-count{color:#9fbad0}
 .history-insufficient{font-size:14px;font-weight:750;color:#b1bfce;margin-top:10px}
 
-/* V18.33.12.9: Maliyet kartları — uzun açıklamalar bilgi düğmesinde, değerler ayrı satırda. */
+/* V18.33.12.10: Maliyet kartları — uzun açıklamalar bilgi düğmesinde, değerler ayrı satırda. */
 #economicMetrics{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:10px}
 #economicMetrics>.cost-card{min-width:0;padding:12px 14px;display:flex;flex-direction:column;gap:6px;overflow:visible;overflow-wrap:normal;word-break:normal}
 #economicMetrics .cost-head{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;font-size:clamp(13px,calc(14px * var(--vito-scale,1)),21px);color:#bdcbda;line-height:1.25}
@@ -368,7 +368,7 @@ body.scanner-open{overflow:hidden}
 #actions .tools-drawer .toolbar{margin-top:0}
 @media(max-width:420px){#actions .tools-drawer>summary,#actions .counter-protection-drawer>summary{padding:12px 10px}#actions .tools-drawer>.accordion-body,#actions .counter-protection-content{padding:10px!important}}
 
-/* V18.33.12.9 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
+/* V18.33.12.10 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
 #driving .two.section>.panel,
 #driving .two.section .panel,
 #driving .two>.panel,
@@ -459,7 +459,7 @@ body.scanner-open{overflow:hidden}
 }
 
 
-/* V18.33.12.9 / Adım 10 — İşleve göre renk vurguları.
+/* V18.33.12.10 / Adım 10 — İşleve göre renk vurguları.
    Zeminler koyu ve ortak; başarı/uyarı/gerçek-tahmini durum renklerine dokunulmaz. */
 :root{
  --vito-accent-fuel:#60a5fa;
@@ -500,7 +500,7 @@ body.scanner-open{overflow:hidden}
 #metrics>.card,#driveMetrics>.mini,#economicMetrics>.mini{min-width:0;box-sizing:border-box}
 
 
-/* V18.33.12.9 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
+/* V18.33.12.10 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
    yearSummary kartlarına uygulanan kurallar, diğer kartlardan bağımsızdır. */
 #yearSummary.year-summary > div.summary-card{border-left-width:4px!important;border-left-style:solid!important;box-sizing:border-box;min-width:0}
 #yearSummary.year-summary > div.summary-distance{border-left-color:#53c7b2!important}
@@ -573,7 +573,7 @@ main > details.accordion > summary:focus-visible,
  .drawer-subtitle{font-size:12px}
 }
 
-/* V18.33.12.9 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
+/* V18.33.12.10 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
 .vito-svg-icon{width:21px;height:21px;display:inline-block;vertical-align:middle;flex:none;color:var(--drawer-accent,#75b4ff)}
 .drawer-title{display:flex;align-items:center;gap:10px}
 #editor>summary{gap:9px;align-items:center}
@@ -588,7 +588,7 @@ main > details.accordion > summary:focus-visible,
 #vehicle{border-left:4px solid var(--drawer-accent)!important}
 #vehicle>summary{display:flex;align-items:center;gap:10px;min-height:69px}
 #vehicle .vito-last-icon .vito-svg-icon{color:var(--drawer-accent)}
-/* V18.33.12.9 — Son Dolum simgesi sabit genişlikte; başlık sol hizalı; durum rengi ortak. */
+/* V18.33.12.10 — Son Dolum simgesi sabit genişlikte; başlık sol hizalı; durum rengi ortak. */
 #vehicle > summary > .vito-last-icon{
  display:inline-flex;align-items:center;justify-content:center;
  flex:0 0 21px!important;width:21px;min-width:21px!important;max-width:21px;
@@ -625,7 +625,7 @@ main > details.accordion > summary:focus-visible,
 .footer-help[open]>summary::after{content:'⌃'}
 .footer-help p{padding:0 15px 13px;margin:0;font-size:12px;line-height:1.65;color:#acc3d9}
 </style><style>
-/* V18.33.12.9 — sıkıştırılmış üst başlık ve araç profili */
+/* V18.33.12.10 — sıkıştırılmış üst başlık ve araç profili */
 header.vito-topbar{display:block;padding:8px max(12px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953}
 .vehicle-profile{width:100%;max-width:1150px;margin:0 auto;background:transparent;border:0;overflow:visible}
 .vehicle-profile>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;min-height:37px;cursor:pointer;border-radius:9px;padding:5px 8px;background:#1b304a;border:1px solid #304c69;color:#eef5ff}
@@ -684,7 +684,7 @@ main > details.accordion[open] > summary::after,
 .vehicle-profile>summary::after{content:'⌄';display:inline-grid;place-items:center;flex:0 0 25px;width:25px;height:25px;margin-left:1px;border-radius:6px;color:#9dcced;font:700 20px/1 system-ui,sans-serif;transition:none}
 .vehicle-profile[open]>summary::after{content:'×';color:#fff;font:700 22px/1 system-ui,sans-serif;background:#a82f45;border:1px solid #ea7182;box-shadow:0 1px 7px #0005}
 
-/* V18.33.12.9 — Başlık her ekran genişliğinde sola yaslı. */
+/* V18.33.12.10 — Başlık her ekran genişliğinde sola yaslı. */
 .vehicle-profile>summary{justify-content:flex-start!important;text-align:left!important}
 .vehicle-brand{display:block;text-align:left!important;margin-right:0;flex:0 1 auto}
 .vehicle-software{margin-left:auto;text-align:right!important}
@@ -704,7 +704,7 @@ main > details.accordion[open] > summary::after,
 .vehicle-profile-source a{overflow-wrap:anywhere;word-break:break-word}
 @media(max-width:400px){.vehicle-brand{font-size:12px}.vehicle-software{font-size:10px}.vehicle-profile>summary{gap:5px;padding:5px 6px}}
 
-/* V18.33.12.9 — Genel Özet: tek sütun, ince yatay kartlar ve bilgi simgesi. */
+/* V18.33.12.10 — Genel Özet: tek sütun, ince yatay kartlar ve bilgi simgesi. */
 #metrics,#metrics.grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:7px!important;width:100%;min-width:0}
 #metrics>.compact-stat{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0;max-width:100%;padding:10px 12px!important;min-height:54px;border-radius:10px}
 #metrics .compact-stat-label{flex:1 1 auto;min-width:0;color:#b9cbe1;font-size:clamp(13px,calc(14px * var(--vito-scale)),19px);line-height:1.3;overflow-wrap:anywhere}
@@ -717,13 +717,28 @@ main > details.accordion[open] > summary::after,
 .compact-stat-pop p{margin:8px 0 0}
 @media(max-width:480px){#metrics,#metrics.grid{grid-template-columns:minmax(0,1fr)!important}#metrics>.compact-stat{gap:8px;padding:9px 10px!important}}
 @media(max-width:370px){#metrics .compact-stat-right{max-width:57%}}
-/* V18.33.12.9 — Genel Özet: başlık + bilgi üstte, değer tam genişlikte altta. */
+/* V18.33.12.10 — Genel Özet: başlık + bilgi üstte, değer tam genişlikte altta. */
 #metrics>.compact-stat{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:8px!important;min-width:0!important;min-height:0!important;padding:12px 14px!important}
 #metrics .compact-stat-head{display:flex;justify-content:space-between;align-items:center;gap:10px;min-width:0;width:100%}
 #metrics .compact-stat-label{flex:1 1 auto;min-width:0;overflow-wrap:normal;word-break:normal;font-size:clamp(13px,calc(14px * var(--vito-scale)),20px);line-height:1.32}
 #metrics .compact-stat-info{flex:0 0 32px;width:32px;height:32px;min-width:32px;min-height:32px}
 #metrics .compact-stat-value{display:block!important;width:100%;max-width:100%!important;min-width:0!important;text-align:left!important;white-space:normal;overflow-wrap:normal!important;word-break:normal!important;font-size:clamp(18px,calc(20px * var(--vito-scale)),26px);font-weight:750;line-height:1.3;letter-spacing:-.02em}
 @media(max-width:370px){#metrics .compact-stat-value{font-size:clamp(17px,calc(18px * var(--vito-scale)),23px)}}
+</style><style>
+/* V18.33.12.10 — Ortak açıklama penceresi, cihaz kenarlarından güvenli boşluk. */
+#vitoHelpOverlay[hidden]{display:none!important}
+#vitoHelpOverlay{position:fixed!important;inset:0!important;z-index:11050!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:16px!important;padding-left:max(16px,env(safe-area-inset-left))!important;padding-right:max(16px,env(safe-area-inset-right))!important;padding-top:max(16px,env(safe-area-inset-top))!important;padding-bottom:max(16px,env(safe-area-inset-bottom))!important;background:rgba(4,11,23,.78)!important;box-sizing:border-box!important;overscroll-behavior:contain!important}
+#vitoHelpDialog{position:relative;box-sizing:border-box;flex:0 1 420px!important;width:100%!important;max-width:420px!important;min-width:0!important;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px)!important;display:flex;flex-direction:column;border:1px solid #55758e;border-radius:16px;background:#172b40;color:#e0e9f5;box-shadow:0 20px 70px #000c;overflow:hidden;font-family:inherit}
+#vitoHelpOverlay .vito-help-head{padding:14px 15px;display:flex;align-items:center;gap:10px;flex:none;border-bottom:1px solid #45647d}
+#vitoHelpOverlay .vito-help-head svg{width:22px;height:22px;flex:none;color:#85c4f4}
+#vitoHelpTitle{font-size:clamp(17px,calc(18px * var(--vito-scale,1)),23px);font-weight:750;line-height:1.3;min-width:0;overflow-wrap:anywhere;flex:1}
+#vitoHelpClose{min-width:40px;min-height:40px;width:40px;height:40px;flex:none;display:grid;place-items:center;border:1px solid #e36d7b;border-radius:10px;background:#a82f45;color:#fff;font-size:27px;font-weight:700;padding:0;line-height:1;cursor:pointer}
+#vitoHelpContent{padding:16px;min-width:0;overflow:auto;overflow-wrap:anywhere;word-break:normal;line-height:1.6;font-size:clamp(14px,calc(15px * var(--vito-scale,1)),20px);overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+#vitoHelpContent>:first-child{margin-top:0}#vitoHelpContent>:last-child{margin-bottom:0}
+#vitoHelpContent p{margin:0 0 12px}#vitoHelpContent strong{color:#fff}
+#vitoHelpContent ul,#vitoHelpContent ol{padding-left:22px}
+#vitoHelpContent .cost-info-body,#vitoHelpContent .tool-help-content,#vitoHelpContent .story-note{position:static!important;display:block!important;width:auto!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:inherit!important;box-shadow:none!important;font:inherit!important;line-height:inherit!important}
+body.vito-help-open{overflow:hidden!important}
 </style></head><body><header class="vito-topbar">
 <details class="vehicle-profile" id="vehicleProfile">
 <summary><span class="vehicle-brand">Mercedes <strong>VITO</strong> Yakıt Takip</span><span class="vehicle-software">Yazılım versiyonu 14.1</span></summary>
@@ -775,7 +790,7 @@ main > details.accordion[open] > summary::after,
 <div class="vehicle-equipment-full"><details class="vehicle-equipment-group"><summary>Güvenlik, sürüş destekleri ve frenler <span style="color:#9cbbd2;font-size:11px;font-weight:500">22 kod</span></summary><dl><div><dt>B25</dt><dd>Elektrikli park freni</dd></div><div><dt>BA3</dt><dd>Aktif Fren Asistanı</dd></div><div><dt>BB6</dt><dd>Fren takviyesi arıza telafisi</dd></div><div><dt>BB7</dt><dd>CO₂ odaklı fren sistemi</dd></div><div><dt>BH1</dt><dd>HOLD (yokuşta / duruşta tutma) işlevi</dd></div><div><dt>JA7</dt><dd>Kör nokta izleme sistemi</dd></div><div><dt>JB4</dt><dd>Aktif şerit takip asistanı</dd></div><div><dt>JB7</dt><dd>Geri görüş kameralı park paketi</dd></div><div><dt>JS2</dt><dd>Akıllı hız asistanı</dd></div><div><dt>JW8</dt><dd>Sürücü dikkat ve yorgunluk asistanı (ATTENTION ASSIST)</dd></div><div><dt>J55</dt><dd>Ön yolcu emniyet kemeri uyarısı</dd></div><div><dt>K51</dt><dd>Yanlış yakıt doldurmayı önleyici sistem</dd></div><div><dt>LE1</dt><dd>Uyarlanabilir fren lambaları (acil frenlemede yanıp sönen uyarı)</dd></div><div><dt>MS1</dt><dd>Hız sabitleyici</dd></div><div><dt>RY2</dt><dd>Ön ve arka aks kablosuz lastik basınç izleme sistemi</dd></div><div><dt>SA6</dt><dd>Ön yolcu hava yastığı</dd></div><div><dt>SH1</dt><dd>Sürücü göğüs/kalça yan hava yastığı</dd></div><div><dt>SH2</dt><dd>Ön yolcu göğüs/kalça yan hava yastığı</dd></div><div><dt>SH9</dt><dd>Sürücü ve ön yolcu perde hava yastıkları</dd></div><div><dt>SK2</dt><dd>Sürücü koltuğu doluluk algılama</dd></div><div><dt>SK6</dt><dd>Çocuk algılama sistemi</dd></div><div><dt>T70</dt><dd>Yolcu bölümü kapılarında çocuk güvenlik kilidi</dd></div></dl></details><details class="vehicle-equipment-group"><summary>Konfor, klima ve elektrik <span style="color:#9cbbd2;font-size:11px;font-weight:500">26 kod</span></summary><dl><div><dt>C6L</dt><dd>Çok işlevli direksiyon simidi</dd></div><div><dt>CL1</dt><dd>Yüksekliği ve eğimi ayarlanabilir direksiyon</dd></div><div><dt>CL3</dt><dd>Deri direksiyon simidi</dd></div><div><dt>CF7</dt><dd>Konfor süspansiyon</dd></div><div><dt>E07</dt><dd>Araç konum belirleme ve takip sistemi</dd></div><div><dt>E4S</dt><dd>Akıllı telefon entegrasyon paketi</dd></div><div><dt>E7B</dt><dd>Navigasyon ön hazırlığı</dd></div><div><dt>E7M</dt><dd>MBUX multimedya sistemi</dd></div><div><dt>ED4</dt><dd>12 V / 92 Ah AGM akü</dd></div><div><dt>EL9</dt><dd>Ön ve arka iki yollu hoparlörler</dd></div><div><dt>ES3</dt><dd>Arka yolcu koltuk sıralarında sağ ve sol 12 V prizler</dd></div><div><dt>F2W</dt><dd>Kış paketi</dd></div><div><dt>F3Z</dt><dd>Konforlu kapatma sistemi</dd></div><div><dt>F48</dt><dd>Ön cam yıkama sistemi ısıtıcısı</dd></div><div><dt>F64</dt><dd>Elektrikli katlanan dış aynalar</dd></div><div><dt>F66</dt><dd>Kilitlenebilir torpido gözü</dd></div><div><dt>F68</dt><dd>Isıtmalı ve elektrikli ayarlanabilen dış dikiz aynaları</dd></div><div><dt>F71</dt><dd>Kendiliğinden kararan iç dikiz aynası</dd></div><div><dt>FG9</dt><dd>Arka kolçaklarda iki takılabilir bardaklık</dd></div><div><dt>FS5</dt><dd>Güneşliklerde aydınlatmalı makyaj aynaları</dd></div><div><dt>H00</dt><dd>Yolcu bölümü ısıtma/soğutma hava kanalı</dd></div><div><dt>H20</dt><dd>Tüm camlarda ısı yalıtımı</dd></div><div><dt>HH4</dt><dd>THERMOTRONIC otomatik klima</dd></div><div><dt>HX1</dt><dd>R-1234yf klima soğutucu akışkanı</dd></div><div><dt>HZ0</dt><dd>Elektrikli yardımcı ısıtıcı</dd></div><div><dt>HZ7</dt><dd>Arka bölüm TEMPMATIC yarı otomatik klima</dd></div></dl></details><details class="vehicle-equipment-group"><summary>Kapılar, gövde, dış görünüm ve aydınlatma <span style="color:#9cbbd2;font-size:11px;font-weight:500">29 kod</span></summary><dl><div><dt>CM2</dt><dd>Gövde renginde tampon ve sökülebilir parçalar</dd></div><div><dt>CU4</dt><dd>Aerodinamik paket</dd></div><div><dt>D12</dt><dd>Tavan rayı / portbagaj taşıyıcısı</dd></div><div><dt>FK2</dt><dd>Krom kaplı radyatör ızgarası</dd></div><div><dt>FP2</dt><dd>Vito ayna paketi</dd></div><div><dt>FP4</dt><dd>İç mekân krom paketi</dd></div><div><dt>H15</dt><dd>Siyah açık gözenekli ıhlamur ağacı dekor</dd></div><div><dt>H16</dt><dd>Siyah çizgili piyano lake dekor</dd></div><div><dt>L45</dt><dd>MULTIBEAM LED farlar ve Uzun Far Asistanı Plus</dd></div><div><dt>LA2</dt><dd>Far asistanı</dd></div><div><dt>LB9</dt><dd>Aydınlatmalı giriş/çıkış alanları</dd></div><div><dt>LC4</dt><dd>Üst konsolda konfor kumanda paneli</dd></div><div><dt>LC6</dt><dd>Arka yolcu tutamaklarında okuma lambası</dd></div><div><dt>LC7</dt><dd>Ön ayak bölgesi aydınlatması</dd></div><div><dt>LC8</dt><dd>Bagaj kapağı çevre aydınlatması</dd></div><div><dt>LG4</dt><dd>LED arka stop, fren ve sinyal lambaları</dd></div><div><dt>LP2</dt><dd>Yolcu bölümü iç ve ambiyans aydınlatması</dd></div><div><dt>P28</dt><dd>EASY PACK elektrikli kayar kapı ve bagaj kapağı paketi</dd></div><div><dt>T14</dt><dd>Yük bölümü kayar kapısı için sabitleme mekanizması</dd></div><div><dt>T19</dt><dd>Sol kayar kapı</dd></div><div><dt>T55</dt><dd>Sağ kayar kapının elektrikli çalıştırılması</dd></div><div><dt>T56</dt><dd>Sol kayar kapının elektrikli çalıştırılması</dd></div><div><dt>W16</dt><dd>Sol ön yan sabit cam</dd></div><div><dt>W17</dt><dd>Sağ ön yan sabit cam</dd></div><div><dt>W29</dt><dd>Arka yan sabit cam</dd></div><div><dt>W68</dt><dd>EASY PACK bagaj kapağı</dd></div><div><dt>W70</dt><dd>Karartılmış arka yolcu bölümü camları</dd></div><div><dt>W78</dt><dd>Arka cam sileceği ve yıkama sistemi</dd></div><div><dt>XM4</dt><dd>Akustik paket</dd></div></dl></details><details class="vehicle-equipment-group"><summary>Koltuklar, döşeme ve yolcu bölümü <span style="color:#9cbbd2;font-size:11px;font-weight:500">16 kod</span></summary><dl><div><dt>S23</dt><dd>İkili ön yolcu koltuğu</dd></div><div><dt>SA1</dt><dd>Sürücü koltuğunda ileri/geri minder ayarı</dd></div><div><dt>SB1</dt><dd>Konforlu sürücü koltuğu</dd></div><div><dt>SE5</dt><dd>Sürücü koltuğu bel desteği</dd></div><div><dt>T74</dt><dd>Giriş bölümünde tutamak</dd></div><div><dt>T75</dt><dd>Sürücü ve ön yolcu giriş tutamağı</dd></div><div><dt>U3V</dt><dd>İlk arka koltuk sırasında karşılıklı oturma düzenine uygun kızak bağlantısı</dd></div><div><dt>U73</dt><dd>Yolcu bölümü kolçakları</dd></div><div><dt>UR1</dt><dd>Hızlı sökülebilir bağlantılı koltuk kızak sistemi</dd></div><div><dt>US4</dt><dd>Birinci sırada dış koltuğu katlanabilir üç kişilik konforlu koltuk</dd></div><div><dt>US5</dt><dd>İkinci sırada dış koltuğu katlanabilir üç kişilik konforlu koltuk</dd></div><div><dt>V23</dt><dd>Yüksek kaliteli iç kaplama</dd></div><div><dt>V36</dt><dd>Yolcu ve yük bölümü tavan kaplaması</dd></div><div><dt>V44</dt><dd>Ön bölüm halı kaplaması</dd></div><div><dt>VH1</dt><dd>Arka bölüm tutamakları</dd></div><div><dt>VU9</dt><dd>Siyah suni deri döşeme</dd></div></dl></details><details class="vehicle-equipment-group"><summary>Şasi, jant, aktarma ve teknik donanım <span style="color:#9cbbd2;font-size:11px;font-weight:500">26 kod</span></summary><dl><div><dt>A1O</dt><dd>IFA üretimi arka aks mili</dd></div><div><dt>G43</dt><dd>9G-TRONIC otomatik şanzıman</dd></div><div><dt>IN2</dt><dd>3.200 mm dingil mesafesi, uzun arka uzantı</dd></div><div><dt>J1W</dt><dd>Bakım aralığı: 1 yıl</dd></div><div><dt>JX1</dt><dd>Servis aralığı: 25.000 km</dd></div><div><dt>KB5</dt><dd>70 litre ana yakıt deposu</dd></div><div><dt>KL5</dt><dd>Su ayırıcılı yakıt filtresi</dd></div><div><dt>KP7</dt><dd>SCR 4. nesil egzoz gazı arıtma sistemi</dd></div><div><dt>M3E</dt><dd>5. kademe elektrikli radyatör fanı</dd></div><div><dt>M5O</dt><dd>174 kW / 237 PS motor gücü</dd></div><div><dt>M60</dt><dd>14 V / 250 A alternatör</dd></div><div><dt>M72</dt><dd>HVO uyumlu araç</dd></div><div><dt>MG9</dt><dd>Alternatör yönetim sistemi</dd></div><div><dt>MJ8</dt><dd>ECO start/stop işlevi</dd></div><div><dt>MK8</dt><dd>210 km/sa hız sınırı</dd></div><div><dt>MO5</dt><dd>Euro 6E RDE5 emisyon sınıfı</dd></div><div><dt>MU8</dt><dd>OM654 DE 20 LA motor, en yüksek güç seviyesi</dd></div><div><dt>MX0</dt><dd>BlueEFFICIENCY paketi</dd></div><div><dt>QA4</dt><dd>2.500 kg römork çekme kapasitesi</dd></div><div><dt>RG7</dt><dd>225/55 R17 lastikler</dd></div><div><dt>RK8</dt><dd>17 inç, 20 kollu hafif alaşım jantlar</dd></div><div><dt>RF2</dt><dd>Dunlop lastikler</dd></div><div><dt>RM7</dt><dd>Yaz lastikleri</dd></div><div><dt>RX7</dt><dd>Borbet jant üreticisi</dd></div><div><dt>V85</dt><dd>100W lastik hız ve yük endeksi</dd></div><div><dt>XA5</dt><dd>3.200 kg ağırlık varyantı</dd></div></dl></details><details class="vehicle-equipment-group"><summary>Araç tanımlama ve teslimat donanımı <span style="color:#9cbbd2;font-size:11px;font-weight:500">13 kod</span></summary><dl><div><dt>581L</dt><dd>Türkiye pazarına yönelik araç</dd></div><div><dt>9197</dt><dd>Obsidyen siyah metalik boya</dd></div><div><dt>F447</dt><dd>447 model serisi</dd></div><div><dt>IB6</dt><dd>C447 Vito/V-Class model serisi</dd></div><div><dt>JK5</dt><dd>Renkli ekranlı gösterge paneli</dd></div><div><dt>P4F</dt><dd>Euro NCAP ülke seti</dd></div><div><dt>XC8</dt><dd>Dışarıdan görülebilir şasi numarası</dd></div><div><dt>XC9</dt><dd>COC uygunluk belgeleri</dd></div><div><dt>XU8</dt><dd>Türkçe işaretler ve basılı belgeler</dd></div><div><dt>Y44</dt><dd>İkaz üçgeni</dd></div><div><dt>YF7</dt><dd>1 kg yangın söndürücü</dd></div><div><dt>Z42</dt><dd>Binek araç olarak tescil</dd></div><div><dt>ZQ9</dt><dd>Tourer SELECT donanım seviyesi</dd></div></dl></details></div>
 <p class="vehicle-profile-source"><a href="https://mb.vin/vin/402c3befdab263ff6f035c662600fff22/options/" target="_blank" rel="noopener noreferrer">mb.vin — W1VVNFFZ9S4427150 araç donanım listesinin tamamı</a></p>
 </section>
- <p class="vehicle-build">Teknik sürüm: V18.33.12.9</p>
+ <p class="vehicle-build">Teknik sürüm: V18.33.12.10</p>
 </div></details></header><main>
 <div id="status" role="status"></div>
 <details class="accordion" id="editor"><summary id="editorTitle"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg> Yeni Kayıt</summary><div class="accordion-body"><form id="recordForm">
@@ -1292,32 +1307,15 @@ function backupFilename(){let d=new Date(),p=n=>String(n).padStart(2,'0');return
 function markBackupNeeded(){try{localStorage.removeItem('vito-alert-read-backup');localStorage.setItem('vito-backup-changes',String(Number(localStorage.getItem('vito-backup-changes')||0)+1))}catch{}updateBackupNotice()}
 function alertKey(a){return 'vito-alert-read-'+a.id}
 
-/* Sadece arayüz: Genel Özet bilgi simgesi açıklaması. */
-document.getElementById('metrics').addEventListener('click',event=>{
- const control=event.target.closest('[data-stat-info]');if(!control)return;
- event.stopPropagation();
- const explanations=[
-  'İlk dolumdan sonraki dolumlar arasında gidilen toplam mesafe.',
-  'İlk dolum hariç; toplam yakıtın toplam mesafeye göre ağırlıklı tüketimi.',
-  'İlk dolum dahil ödenen yakıt tutarlarının toplamı.',
-  'İlk dolum hariç ödenen yakıtın toplam mesafeye oranı.',
-  'Gösterge Koruma üzerinden sürdürülen birikimli motor çalışma saati.',
-  'Son dolum aralığındaki ortalama motor çalışma hızı; gerçek saat okumasına veya tahmine dayanır.'
- ];
- const index=Number(control.dataset.statInfo);
- if(!Number.isInteger(index)||index<0||index>=explanations.length)return;
- const card=control.closest('.compact-stat');
- const old=document.querySelector('.compact-stat-pop');if(old)old.remove();
- const tooltip=document.createElement('div');tooltip.className='compact-stat-pop';tooltip.setAttribute('role','dialog');
- tooltip.innerHTML='<div class="compact-stat-pop-head"><b>Açıklama</b><button type="button" aria-label="Kapat">×</button></div><p></p>';
- tooltip.querySelector('p').textContent=explanations[index];
- document.body.append(tooltip);
- const rect=card.getBoundingClientRect();
- tooltip.style.top=Math.min(window.innerHeight-tooltip.offsetHeight-12,Math.max(12,rect.bottom+6))+'px';
- tooltip.style.left=Math.min(window.innerWidth-tooltip.offsetWidth-10,Math.max(10,rect.left))+'px';
- tooltip.querySelector('button').onclick=()=>tooltip.remove();
-});
-document.addEventListener('click',event=>{if(!event.target.closest('.compact-stat-info,.compact-stat-pop'))document.querySelector('.compact-stat-pop')?.remove()});
+/* V18.33.12.10: Bütün açıklamalar ortak, ekrana sabit pencereyi kullanır. */
+const vitoMetricDescriptions=[
+ 'İlk dolumdan sonraki dolumlar arasında gidilen toplam mesafe.',
+ 'İlk dolum hariç; toplam yakıtın toplam mesafeye göre ağırlıklı tüketimi.',
+ 'İlk dolum dahil ödenen yakıt tutarlarının toplamı.',
+ 'İlk dolum hariç ödenen yakıtın toplam mesafeye oranı.',
+ 'Gösterge Koruma üzerinden sürdürülen birikimli motor çalışma saati. ✓ gerçek ölçüm işaretidir.',
+ 'Son dolum aralığındaki ortalama motor çalışma hızı; gerçek saat okumasına veya tahmine dayanır. ≈ tahmini değeri gösterir.'
+];
 function renderAlerts(){const sections={actions:[],records:[],vehicle:[]};for(const a of alerts){if(!localStorage.getItem(alertKey(a)))sections[a.section].push(a)}for(const [section,items] of Object.entries(sections)){const badge=$('badge'+section[0].toUpperCase()+section.slice(1));if(badge){badge.textContent=items.length;badge.hidden=!items.length}const box=$(section==='actions'?'actionAlerts':section==='records'?'recordAlerts':'vehicleAlerts');if(box)box.innerHTML=items.map(a=>`<div class="alert-item"><span>${esc(a.text)}</span><button type="button" data-read-alert="${esc(a.id)}">Okundu</button></div>`).join('') }}
 function addAlert(section,id,message){alerts=alerts.filter(a=>a.id!==id);alerts.push({section,id,text:message});renderAlerts()}
 function updateBackupNotice(){let changes=Number(localStorage.getItem('vito-backup-changes')||0),last=localStorage.getItem('vito-last-backup'),days=last?Math.floor((Date.now()-Date.parse(last))/86400000):null;let due=records.length&&(!last||changes>=3||(days!==null&&days>=7));alerts=alerts.filter(a=>a.id!=='backup');if(due){let label=!last?'Henüz JSON yedeği alınmadı.':changes>=3?`${changes} veri değişikliğinden sonra yedek alınmadı.`:`Son yedekten bu yana ${days} gün geçti.`;alerts.push({section:'actions',id:'backup',text:label+' İşlevler bölümünden JSON yedeği alın.'})}else localStorage.removeItem(alertKey({id:'backup'}));renderAlerts()}
@@ -1456,4 +1454,70 @@ document.addEventListener('toggle',e=>{
 $('rows').addEventListener('toggle',e=>{if(!e.target.matches?.('details.fuel-card')||!e.target.open)return;$('rows').querySelectorAll('details.fuel-card').forEach(d=>{if(d!==e.target)d.open=false})},true);
 
 (async()=>{try{db=await openDB();try{motorRef=JSON.parse(localStorage.getItem('vito-motor-reference')||'null')}catch{}let stored=await tx('readonly',s=>s.getAll());await reload();msg(records.length?`${records.length} kayıt cihazdan yüklendi.`:'Başlamak için JSON dosyanızı içe aktarın.');if(navigator.storage?.persist)navigator.storage.persist().catch(()=>{})}catch(e){msg('Yerel depolama açılamadı. Gizli mod veya tarayıcı ayarlarını kontrol edin: '+e.message,true)}})();
-</script><script>(function(){const key='vito-font-size';const valid=['normal','large','xlarge'];let choice='large';try{const saved=localStorage.getItem(key);if(valid.includes(saved))choice=saved}catch{}function setSize(v){if(!valid.includes(v))return;document.documentElement.dataset.fontSize=v;document.querySelectorAll('[data-font-reset]').forEach(b=>b.setAttribute('aria-pressed',String(v==='large')));try{localStorage.setItem(key,v)}catch{}}setSize(choice);document.querySelectorAll('[data-font-step]').forEach(b=>b.addEventListener('click',()=>{const i=valid.indexOf(document.documentElement.dataset.fontSize||choice);setSize(valid[Math.max(0,Math.min(valid.length-1,i+(b.dataset.fontStep==='up'?1:-1)))])}));document.querySelector('[data-font-reset]')?.addEventListener('click',()=>setSize('large'))})();</script></body></html>
+</script><script>(function(){const key='vito-font-size';const valid=['normal','large','xlarge'];let choice='large';try{const saved=localStorage.getItem(key);if(valid.includes(saved))choice=saved}catch{}function setSize(v){if(!valid.includes(v))return;document.documentElement.dataset.fontSize=v;document.querySelectorAll('[data-font-reset]').forEach(b=>b.setAttribute('aria-pressed',String(v==='large')));try{localStorage.setItem(key,v)}catch{}}setSize(choice);document.querySelectorAll('[data-font-step]').forEach(b=>b.addEventListener('click',()=>{const i=valid.indexOf(document.documentElement.dataset.fontSize||choice);setSize(valid[Math.max(0,Math.min(valid.length-1,i+(b.dataset.fontStep==='up'?1:-1)))])}));document.querySelector('[data-font-reset]')?.addEventListener('click',()=>setSize('large'))})();</script><div id="vitoHelpOverlay" hidden aria-hidden="true">
+ <div id="vitoHelpDialog" role="dialog" aria-modal="true" aria-labelledby="vitoHelpTitle" tabindex="-1">
+  <div class="vito-help-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v6m0-10h.01"/></svg><div id="vitoHelpTitle">Açıklama</div><button type="button" id="vitoHelpClose" aria-label="Açıklamayı kapat">×</button></div>
+  <div id="vitoHelpContent"></div>
+ </div>
+</div>
+<script>
+/* Yalnızca açıklama gösterimi; veri, hesaplama ve kayıt işlevleri korunur. */
+(function(){
+ const overlay=document.getElementById('vitoHelpOverlay');
+ const dialog=document.getElementById('vitoHelpDialog');
+ const title=document.getElementById('vitoHelpTitle');
+ const content=document.getElementById('vitoHelpContent');
+ const close=document.getElementById('vitoHelpClose');
+ let restoreFocus=null;
+ function showHelp(label,body,origin){
+   restoreFocus=origin||document.activeElement;
+   title.textContent=label||'Açıklama';
+   content.replaceChildren();
+   if(typeof body==='string')content.textContent=body;
+   else if(body)content.appendChild(body.cloneNode(true));
+   overlay.hidden=false;overlay.setAttribute('aria-hidden','false');
+   document.body.classList.add('vito-help-open');
+   content.scrollTop=0;close.focus();
+ }
+ function hideHelp(){
+   if(overlay.hidden)return;
+   overlay.hidden=true;overlay.setAttribute('aria-hidden','true');
+   document.body.classList.remove('vito-help-open');
+   if(restoreFocus&&restoreFocus.isConnected)restoreFocus.focus({preventScroll:true});
+   restoreFocus=null;
+ }
+ close.addEventListener('click',hideHelp);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)hideHelp()});
+ document.addEventListener('keydown',e=>{
+   if(overlay.hidden)return;
+   if(e.key==='Escape'){e.preventDefault();hideHelp()}
+   else if(e.key==='Tab'){
+     const focusables=[close,...content.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled])')];
+     const i=focusables.indexOf(document.activeElement);
+     if(e.shiftKey&&i<=0){e.preventDefault();focusables.at(-1).focus()}
+     else if(!e.shiftKey&&i===focusables.length-1){e.preventDefault();focusables[0].focus()}
+   }
+ });
+ const helpSelector='details.story-help,details.cost-info,details.tool-help,details.chart-help,details.footer-help';
+ document.addEventListener('click',e=>{
+   const info=e.target.closest('[data-stat-info]');
+   if(info){
+     e.preventDefault();e.stopPropagation();
+     const index=Number(info.dataset.statInfo);
+     if(Number.isInteger(index)&&index>=0&&index<vitoMetricDescriptions.length)
+       showHelp('Açıklama',vitoMetricDescriptions[index],info);
+     return;
+   }
+   const summary=e.target.closest('summary');
+   const details=summary?.parentElement;
+   if(!details||!details.matches(helpSelector))return;
+   e.preventDefault();e.stopPropagation();
+   const source=Array.from(details.children).filter(el=>el!==summary);
+   const wrap=document.createElement('div');
+   source.forEach(el=>wrap.appendChild(el.cloneNode(true)));
+   const label=summary.getAttribute('aria-label')||summary.textContent.replace(/^\s*ⓘ\s*/, '').trim()||'Açıklama';
+   showHelp(label==='Açıklamayı göster'?'Açıklama':label,wrap,summary);
+ },true);
+ // Touch/keyboard activation from native summary also cancelled through click handler.
+})();
+</script></body></html>
