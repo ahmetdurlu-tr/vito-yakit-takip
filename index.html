@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V19.11</title><style>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c31"><title>Vito | Yakıt Takip V19.12</title><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#eaf0fb;background:#0a1120;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}header{padding:23px max(20px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953;display:flex;justify-content:space-between;gap:12px;align-items:center}h1{font-size:23px;margin:0}small,.muted{color:#a2b3ca}main{max-width:1150px;margin:auto;padding:25px 16px 60px}.tag{font-size:12px;border-radius:20px;padding:6px 11px;background:#153a34;color:#a5efca}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card,.panel{background:#111f34;border:1px solid #263951;border-radius:16px;padding:20px}.metric{font-size:26px;font-weight:750;margin:9px 0 2px}.section{margin-top:20px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h2{font-size:17px;margin:0 0 18px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:17px}button,.filelabel{border:1px solid #36516e;border-radius:10px;background:#203450;color:#e9f2ff;padding:10px 13px;display:inline-block}button.primary{background:#3b83ed;border-color:#3b83ed;color:white}button.danger{background:#542b38;border-color:#6b3444}button:hover,.filelabel:hover{filter:brightness(1.16)}input,select{background:#0c192b;color:white;border:1px solid #38506c;border-radius:9px;padding:10px;width:100%;min-width:0}label{display:block;color:#b9cbe1;font-size:13px;margin-bottom:5px}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.formactions{display:flex;gap:9px;align-items:center;margin-top:16px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #27384e;font-size:13px;white-space:nowrap}th{color:#a5b7cd;font-weight:600}td button{padding:6px 9px;font-size:12px}.chart{width:100%;height:250px;display:block}.notice{background:#142c42;border:1px solid #2d5675;border-radius:12px;padding:13px;margin:14px 0;color:#c5dff6;font-size:13px}.foot{font-size:12px;color:#8ea3bc;margin-top:24px;line-height:1.6}.empty{padding:30px;text-align:center;color:#a9bbd0}.chartlegend{font-size:12px;color:#b9cbe1}.hidden{display:none!important}#status{min-height:20px;font-size:13px;color:#9ee6bb} @media(max-width:760px){header{padding:17px}h1{font-size:18px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.formgrid{grid-template-columns:repeat(2,1fr)}.metric{font-size:21px}.card,.panel{padding:15px}}@media(max-width:400px){.formgrid{grid-template-columns:1fr}.grid{gap:8px}.card{padding:12px}}
 details.accordion{margin-top:16px;background:#111f34;border:1px solid #263951;border-radius:16px;overflow:hidden}details.accordion>summary{cursor:pointer;list-style:none;padding:17px 20px;font-weight:650;font-size:17px;display:flex;justify-content:space-between;align-items:center}details.accordion>summary::-webkit-details-marker{display:none}details.accordion>summary::after{content:'⌄';font-size:24px;color:#9fc4f5;transition:transform .2s}details.accordion[open]>summary::after{transform:rotate(180deg)}details.accordion[open]>summary{border-bottom:1px solid #263951}details.accordion>.accordion-body{padding:17px 18px}details.accordion .panel{border:0;background:transparent;padding:0}details.accordion .two .panel{background:#14243a;border:1px solid #263951;border-radius:12px;padding:15px}details.accordion .section{margin-top:0}details.accordion .grid{margin:0}details.accordion .scroll{margin-top:15px}details.accordion .accordion-note{font-size:12px;color:#a2b3ca;font-weight:400}@media(max-width:760px){details.accordion>summary{padding:15px}details.accordion>.accordion-body{padding:14px}}
 
@@ -57,7 +57,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 #driving #scroll-dailyChart,#driving #scroll-hourChart{box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto!important;overflow-y:hidden!important}
 #driving #scroll-dailyChart>svg,#driving #scroll-hourChart>svg{max-width:none!important;display:block}
 
-/* V19.11 — Tarihe dayalı dolum karşılaştırma kartı. */
+/* V19.12 — Tarihe dayalı dolum karşılaştırma kartı. */
 .history-comparison{border:1px solid #38546a;background:#102238;border-radius:12px;padding:13px;min-width:0;color:#e3effa}
 .history-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .history-top strong{font-size:clamp(13px,calc(14px * var(--vito-scale)),18px)}
@@ -76,7 +76,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 .history-count{color:#9fbad0}
 .history-insufficient{font-size:14px;font-weight:750;color:#b1bfce;margin-top:10px}
 
-/* V19.11: Maliyet kartları — uzun açıklamalar bilgi düğmesinde, değerler ayrı satırda. */
+/* V19.12: Maliyet kartları — uzun açıklamalar bilgi düğmesinde, değerler ayrı satırda. */
 #economicMetrics{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:10px}
 #economicMetrics>.cost-card{min-width:0;padding:12px 14px;display:flex;flex-direction:column;gap:6px;overflow:visible;overflow-wrap:normal;word-break:normal}
 #economicMetrics .cost-head{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;font-size:clamp(13px,calc(14px * var(--vito-scale,1)),21px);color:#bdcbda;line-height:1.25}
@@ -92,7 +92,7 @@ html[data-font-size="xlarge"]{--vito-scale:1.25}
 #economicMetrics .cost-info[open] .cost-info-body{position:absolute;right:0;top:100%;width:min(310px,calc(100vw - 90px));z-index:50;box-shadow:0 12px 24px #0009}
 @media(max-width:370px){#economicMetrics .cost-main{font-size:clamp(18px,5.3vw,25px)!important}#economicMetrics>.cost-card{padding:10px}}
 
-/* V19.11: yalnızca yakıt tüketimi grafiğinin durum renkleri için açıklama. */
+/* V19.12: yalnızca yakıt tüketimi grafiğinin durum renkleri için açıklama. */
 #trendLegend .consumption-chart-key{display:flex;flex-wrap:wrap;column-gap:14px;row-gap:8px;margin-top:10px;font-size:12px;line-height:1.5}
 #trendLegend .consumption-chart-key>span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
 #trendLegend .consumption-chart-key i{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none}
@@ -373,7 +373,7 @@ body.scanner-open{overflow:hidden}
 #actions .tools-drawer .toolbar{margin-top:0}
 @media(max-width:420px){#actions .tools-drawer>summary,#actions .counter-protection-drawer>summary{padding:12px 10px}#actions .tools-drawer>.accordion-body,#actions .counter-protection-content{padding:10px!important}}
 
-/* V19.11 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
+/* V19.12 / Adım 9 — Grafiklerde görsel standardizasyon; grafik çizimi ve etkileşimleri aynı kalır. */
 #driving .two.section>.panel,
 #driving .two.section .panel,
 #driving .two>.panel,
@@ -464,7 +464,7 @@ body.scanner-open{overflow:hidden}
 }
 
 
-/* V19.11 / Adım 10 — İşleve göre renk vurguları.
+/* V19.12 / Adım 10 — İşleve göre renk vurguları.
    Zeminler koyu ve ortak; başarı/uyarı/gerçek-tahmini durum renklerine dokunulmaz. */
 :root{
  --vito-accent-fuel:#60a5fa;
@@ -505,7 +505,7 @@ body.scanner-open{overflow:hidden}
 #metrics>.card,#driveMetrics>.mini,#economicMetrics>.mini{min-width:0;box-sizing:border-box}
 
 
-/* V19.11 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
+/* V19.12 — 10. madde eksik: altı Yakıt Kayıtları özet kartına belirgin sol renk şeridi.
    yearSummary kartlarına uygulanan kurallar, diğer kartlardan bağımsızdır. */
 #yearSummary.year-summary > div.summary-card{border-left-width:4px!important;border-left-style:solid!important;box-sizing:border-box;min-width:0}
 #yearSummary.year-summary > div.summary-distance{border-left-color:#53c7b2!important}
@@ -578,7 +578,7 @@ main > details.accordion > summary:focus-visible,
  .drawer-subtitle{font-size:12px}
 }
 
-/* V19.11 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
+/* V19.12 — vektör simgeler, iki satırlı kayıt, dinamik Son Dolum ve açılır açıklama. */
 .vito-svg-icon{width:21px;height:21px;display:inline-block;vertical-align:middle;flex:none;color:var(--drawer-accent,#75b4ff)}
 .drawer-title{display:flex;align-items:center;gap:10px}
 #editor>summary{gap:9px;align-items:center}
@@ -593,7 +593,7 @@ main > details.accordion > summary:focus-visible,
 #vehicle{border-left:4px solid var(--drawer-accent)!important}
 #vehicle>summary{display:flex;align-items:center;gap:10px;min-height:69px}
 #vehicle .vito-last-icon .vito-svg-icon{color:var(--drawer-accent)}
-/* V19.11 — Son Dolum simgesi sabit genişlikte; başlık sol hizalı; durum rengi ortak. */
+/* V19.12 — Son Dolum simgesi sabit genişlikte; başlık sol hizalı; durum rengi ortak. */
 #vehicle > summary > .vito-last-icon{
  display:inline-flex;align-items:center;justify-content:center;
  flex:0 0 21px!important;width:21px;min-width:21px!important;max-width:21px;
@@ -630,7 +630,7 @@ main > details.accordion > summary:focus-visible,
 .footer-help[open]>summary::after{content:'⌃'}
 .footer-help p{padding:0 15px 13px;margin:0;font-size:12px;line-height:1.65;color:#acc3d9}
 </style><style>
-/* V19.11 — sıkıştırılmış üst başlık ve araç profili */
+/* V19.12 — sıkıştırılmış üst başlık ve araç profili */
 header.vito-topbar{display:block;padding:8px max(12px,calc((100vw - 1150px)/2));background:#101c31;border-bottom:1px solid #273953}
 .vehicle-profile{width:100%;max-width:1150px;margin:0 auto;background:transparent;border:0;overflow:visible}
 .vehicle-profile>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;min-height:37px;cursor:pointer;border-radius:9px;padding:5px 8px;background:#1b304a;border:1px solid #304c69;color:#eef5ff}
@@ -689,7 +689,7 @@ main > details.accordion[open] > summary::after,
 .vehicle-profile>summary::after{content:'⌄';display:inline-grid;place-items:center;flex:0 0 25px;width:25px;height:25px;margin-left:1px;border-radius:6px;color:#9dcced;font:700 20px/1 system-ui,sans-serif;transition:none}
 .vehicle-profile[open]>summary::after{content:'×';color:#fff;font:700 22px/1 system-ui,sans-serif;background:#a82f45;border:1px solid #ea7182;box-shadow:0 1px 7px #0005}
 
-/* V19.11 — Başlık her ekran genişliğinde sola yaslı. */
+/* V19.12 — Başlık her ekran genişliğinde sola yaslı. */
 .vehicle-profile>summary{justify-content:flex-start!important;text-align:left!important}
 .vehicle-brand{display:block;text-align:left!important;margin-right:0;flex:0 1 auto}
 .vehicle-software{margin-left:auto;text-align:right!important}
@@ -709,7 +709,7 @@ main > details.accordion[open] > summary::after,
 .vehicle-profile-source a{overflow-wrap:anywhere;word-break:break-word}
 @media(max-width:400px){.vehicle-brand{font-size:12px}.vehicle-software{font-size:10px}.vehicle-profile>summary{gap:5px;padding:5px 6px}}
 
-/* V19.11 — Genel Özet: tek sütun, ince yatay kartlar ve bilgi simgesi. */
+/* V19.12 — Genel Özet: tek sütun, ince yatay kartlar ve bilgi simgesi. */
 #metrics,#metrics.grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:7px!important;width:100%;min-width:0}
 #metrics>.compact-stat{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0;max-width:100%;padding:10px 12px!important;min-height:54px;border-radius:10px}
 #metrics .compact-stat-label{flex:1 1 auto;min-width:0;color:#b9cbe1;font-size:clamp(13px,calc(14px * var(--vito-scale)),19px);line-height:1.3;overflow-wrap:anywhere}
@@ -722,7 +722,7 @@ main > details.accordion[open] > summary::after,
 .compact-stat-pop p{margin:8px 0 0}
 @media(max-width:480px){#metrics,#metrics.grid{grid-template-columns:minmax(0,1fr)!important}#metrics>.compact-stat{gap:8px;padding:9px 10px!important}}
 @media(max-width:370px){#metrics .compact-stat-right{max-width:57%}}
-/* V19.11 — Genel Özet: başlık + bilgi üstte, değer tam genişlikte altta. */
+/* V19.12 — Genel Özet: başlık + bilgi üstte, değer tam genişlikte altta. */
 #metrics>.compact-stat{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:8px!important;min-width:0!important;min-height:0!important;padding:12px 14px!important}
 #metrics .compact-stat-head{display:flex;justify-content:space-between;align-items:center;gap:10px;min-width:0;width:100%}
 #metrics .compact-stat-label{flex:1 1 auto;min-width:0;overflow-wrap:normal;word-break:normal;font-size:clamp(13px,calc(14px * var(--vito-scale)),20px);line-height:1.32}
@@ -730,7 +730,7 @@ main > details.accordion[open] > summary::after,
 #metrics .compact-stat-value{display:block!important;width:100%;max-width:100%!important;min-width:0!important;text-align:left!important;white-space:normal;overflow-wrap:normal!important;word-break:normal!important;font-size:clamp(18px,calc(20px * var(--vito-scale)),26px);font-weight:750;line-height:1.3;letter-spacing:-.02em}
 @media(max-width:370px){#metrics .compact-stat-value{font-size:clamp(17px,calc(18px * var(--vito-scale)),23px)}}
 </style><style>
-/* V19.11 — Ortak açıklama penceresi, cihaz kenarlarından güvenli boşluk. */
+/* V19.12 — Ortak açıklama penceresi, cihaz kenarlarından güvenli boşluk. */
 #vitoHelpOverlay[hidden]{display:none!important}
 #vitoHelpOverlay{position:fixed!important;inset:0!important;z-index:11050!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:16px!important;padding-left:max(16px,env(safe-area-inset-left))!important;padding-right:max(16px,env(safe-area-inset-right))!important;padding-top:max(16px,env(safe-area-inset-top))!important;padding-bottom:max(16px,env(safe-area-inset-bottom))!important;background:rgba(4,11,23,.78)!important;box-sizing:border-box!important;overscroll-behavior:contain!important}
 #vitoHelpDialog{position:relative;box-sizing:border-box;flex:0 1 420px!important;width:100%!important;max-width:420px!important;min-width:0!important;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px)!important;display:flex;flex-direction:column;border:1px solid #55758e;border-radius:16px;background:#172b40;color:#e0e9f5;box-shadow:0 20px 70px #000c;overflow:hidden;font-family:inherit}
@@ -748,7 +748,7 @@ main > details.accordion[open] > summary::after,
 #vitoHelpContent .story-more-body .story-reason b{white-space:nowrap}
 body.vito-help-open{overflow:hidden!important}
 
-/* V19.11 — Tarayıcı onayı yerine erişilebilir ve mobil uyumlu kayıt onayı */
+/* V19.12 — Tarayıcı onayı yerine erişilebilir ve mobil uyumlu kayıt onayı */
 #vitoRecordConfirm[hidden]{display:none!important}
 #vitoRecordConfirm{position:fixed;inset:0;z-index:11050;background:rgba(2,8,19,.77);display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;overscroll-behavior:contain}
 .vito-record-confirm-panel{background:#172b40;color:#eef5ff;border:1px solid #55758e;border-radius:16px;width:min(420px,100%);max-height:calc(100dvh - 32px);max-height:calc(100vh - 32px);overflow:auto;box-shadow:0 20px 70px #0009;padding:16px;min-width:0}
@@ -760,7 +760,7 @@ body.vito-help-open{overflow:hidden!important}
 #clearNewRecord{width:100%;min-height:43px;display:block;margin-top:4px;background:#1c334b;border:1px solid #47728f;color:#c7e4fb;font-weight:650}
 #clearNewRecord[hidden]{display:none!important}
 
-/* V19.11 — Araç bilgileri dış JSON; başlık uzun isimlerde çok satırlı */
+/* V19.12 — Araç bilgileri dış JSON; başlık uzun isimlerde çok satırlı */
 .vehicle-profile>summary{align-items:flex-start!important;min-width:0;gap:8px!important}
 .vehicle-heading{display:flex;flex:1 1 auto;flex-direction:column;align-items:flex-start;min-width:0;gap:3px}
 .vehicle-heading .vehicle-brand{font-size:clamp(14px,3.8vw,17px);font-weight:750;line-height:1.3;min-width:0}
@@ -775,7 +775,7 @@ body.vito-help-open{overflow:hidden!important}
 #vehicleJsonSections:empty{display:none}
 #vehicleProfileStatus{overflow-wrap:anywhere}
 </style><style>
-/* V19.11 — Araç özellikleri düzenleme */
+/* V19.12 — Araç özellikleri düzenleme */
 .vehicle-editor-toolbar,.vehicle-editor-actions,.vehicle-sort-tools,.vehicle-ask-actions{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
 .vehicle-editor-toolbar{margin:14px 0 3px}
 .vehicle-edit-btn{padding:9px 12px;min-height:38px;background:#234763;border:1px solid #5783a3;border-radius:8px;color:#e8f3ff;font:600 13px/1.3 inherit;cursor:pointer}
@@ -786,7 +786,7 @@ body.vito-help-open{overflow:hidden!important}
 .vehicle-section-editor{display:grid;gap:12px}.vehicle-content-edit{background:#14283d;border:1px solid #6888a4;border-radius:8px;color:#eaf2ff;padding:13px;min-height:110px;max-height:50vh;overflow:auto;overflow-wrap:anywhere;font-size:14px;line-height:1.5;user-select:text;-webkit-user-select:text}.vehicle-content-edit:focus{outline:2px solid #78bbf7}.vehicle-content-edit .vehicle-specs{display:block}
 .vehicle-editor-hint{font-size:12px;color:#9ebbd6;line-height:1.55}.vehicle-ask-layer[hidden]{display:none}.vehicle-ask-layer{position:fixed;inset:0;z-index:12000;background:#07111cce;display:flex;align-items:center;justify-content:center;padding:16px}.vehicle-ask-dialog{background:#172b40;color:#fff;border:1px solid #64809b;border-radius:14px;padding:17px;max-width:420px;width:100%;box-shadow:0 15px 45px #0008}.vehicle-ask-dialog h3{margin:0 0 10px}.vehicle-ask-dialog p{line-height:1.55}
 @media(max-width:420px){.vehicle-edit-btn{font-size:12px}.vehicle-sort-item{padding:8px}.vehicle-sort-tools{gap:5px}}
-/* V19.11 — Araç özellikleri listesindeki animasyonlu taşıma */
+/* V19.12 — Araç özellikleri listesindeki animasyonlu taşıma */
 .vehicle-sort-list.vehicle-sort-mode{user-select:none;-webkit-user-select:none}
 .vehicle-sort-list .vehicle-sort-item{touch-action:pan-y;position:relative;transition:border-color 150ms ease}
 .vehicle-sort-list.vehicle-sort-mode .vehicle-sort-item.vehicle-sort-active{opacity:.27;outline:2px dashed #6fd0e7;outline-offset:2px}
@@ -795,7 +795,7 @@ body.vito-help-open{overflow:hidden!important}
 .vehicle-sort-ghost .vehicle-sort-tools{opacity:.72}
 </style>
 <style>
-/* V19.11 — Araç profili işlemleri altta, ana sıralama doğrudan başlıktan */
+/* V19.12 — Araç profili işlemleri altta, ana sıralama doğrudan başlıktan */
 .vehicle-actions-drawer{margin:18px 0 8px;border:1px solid #395f7b;border-radius:10px;background:#142b43;overflow:hidden}
 .vehicle-actions-drawer>summary{padding:12px 13px;color:#dceeff;cursor:pointer;font-weight:700;list-style:none}
 .vehicle-actions-drawer>summary::after{content:'⌄';float:right;color:#9dcced}
@@ -809,7 +809,7 @@ body.vito-help-open{overflow:hidden!important}
 main.section-sort-mode > details.accordion.section-sort-active{outline:2px dashed #90d1ff;outline-offset:2px;opacity:.85}
 main.section-sort-mode > details.accordion:not(.section-sort-active){outline:1px dashed #355e7b;outline-offset:1px}
 
-/* V19.11 — Taşıma hareketini belirgin kılan geçişler */
+/* V19.12 — Taşıma hareketini belirgin kılan geçişler */
 main.section-sort-mode{user-select:none;-webkit-user-select:none} main.section-sort-mode > details.accordion.section-sort-active{opacity:.35!important;outline:2px dashed #6fd0e7;outline-offset:2px;box-shadow:inset 0 0 0 1px #6fd0e7}
 main.section-sort-mode > details.accordion:not(.section-sort-active){outline:none}
 .vito-sort-ghost{position:fixed;z-index:11000;pointer-events:none;box-sizing:border-box;transform:scale(.965);transform-origin:center center;opacity:.97;box-shadow:0 16px 36px #000b,0 0 0 2px #74d2ef;border-radius:12px;background:#1c344d;color:#eef7ff;display:flex;align-items:center;padding:10px 14px;overflow:hidden;transition:transform 150ms ease-out;touch-action:none}
@@ -817,14 +817,27 @@ main.section-sort-mode > details.accordion:not(.section-sort-active){outline:non
 .vito-sort-ghost .badge{display:none!important}
 @media(prefers-reduced-motion:reduce){.vito-sort-ghost{transition:none;transform:none}}
 </style>
-</head><body><header class="vito-topbar">
+<style>
+/* V19.12 - Başlangıç rehberi: mevcut İşlevler görünümüyle uyumlu */
+#aiBeginnerGuide .tool-help-content{padding:5px 13px 15px;overflow-wrap:anywhere}
+#aiBeginnerGuide .tool-help-content p{margin:9px 0!important;line-height:1.65}
+#aiBeginnerGuide h4{color:#a9defa;margin:16px 0 7px;font-size:clamp(14px,calc(14px * var(--vito-scale)),19px)}
+#aiBeginnerGuide ol{padding-left:24px;margin:7px 0 13px}
+#aiBeginnerGuide li{margin:0 0 9px;line-height:1.6;padding-left:2px}
+#aiBeginnerGuide a{color:#8cdbff;text-decoration:underline;text-underline-offset:3px}
+#aiBeginnerGuide a:focus-visible{outline:2px solid #9de6ff;outline-offset:3px}
+#aiBeginnerGuide code{background:#203b54;color:#e4f5ff;border-radius:4px;padding:1px 4px}
+#aiBeginnerGuide .ai-guide-notice{background:#23374b;border-left:3px solid #e6bc69;border-radius:7px;padding:11px 12px;margin:12px 0;line-height:1.6}
+#aiBeginnerGuide .ai-guide-lead{color:#e2edf7}
+#aiBeginnerGuide .ai-guide-updated{color:#9db5cc;font-size:.88em}
+</style></head><body><header class="vito-topbar">
 <details class="vehicle-profile" id="vehicleProfile">
-<summary><span class="vehicle-heading"><span class="vehicle-brand">Yakıt Takip</span><span id="vehicleHeaderName" class="vehicle-header-name" hidden></span></span><span class="vehicle-software">V19.11</span></summary>
+<summary><span class="vehicle-heading"><span class="vehicle-brand">Yakıt Takip</span><span id="vehicleHeaderName" class="vehicle-header-name" hidden></span></span><span class="vehicle-software">V19.12</span></summary>
 <div class="vehicle-profile-body">
  <div class="vehicle-profile-head"><h2 id="vehicleProfileTitle">Araç Bilgileri</h2><span id="vehicleProfileStatus" class="vehicle-profile-label" role="status">Araç bilgileri yüklenmedi.</span></div>
  <div id="vehicleJsonSections" aria-live="polite"></div>
  <details id="vehicleActionsDrawer" class="vehicle-actions-drawer"><summary>İşlevler</summary><div id="vehicleActionsBox" class="vehicle-actions-content"><input id="vehicleJsonInput" class="vehicle-json-file" type="file" accept=".json,application/json" aria-label="Araç bilgileri JSON dosyası seç"></div></details>
- <p class="vehicle-build">Teknik sürüm: V19.11</p>
+ <p class="vehicle-build">Teknik sürüm: V19.12</p>
 </div></details></header><main>
 <div id="status" role="status"></div>
 <details class="accordion" id="editor"><summary id="editorTitle"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg> Yeni Kayıt</summary><div class="accordion-body"><form id="recordForm">
@@ -844,7 +857,50 @@ main.section-sort-mode > details.accordion:not(.section-sort-active){outline:non
 <div class="two section"><div class="panel"><h2>Yıllık yakıt</h2><div class="chart-switch"><button type="button" id="yearLiters" class="primary">Litre</button><button type="button" id="yearCost">Maliyet</button></div><svg id="yearChart" class="chart" viewBox="0 0 540 250"></svg><div class="chartlegend" id="yearLegend">L · Dolum tarihine göre</div></div><div class="panel"><h2>Aylık yakıt</h2><div class="chart-switch"><button type="button" id="monthLiters" class="primary">Litre</button><button type="button" id="monthCost">Maliyet</button></div><svg id="monthChart" class="chart" viewBox="0 0 540 250"></svg><div class="chartlegend" id="monthLegend">L · Son 12 kayıtlı ay</div></div></div>
 
 </div></details>
-<details class="accordion drawer-cost"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="15" rx="2"/><path d="M3 10h18M16 15h2M6 6V4h12"/></svg> Maliyet</span><span class="drawer-subtitle">Gerçek ödeme ve fiyat karşılaştırmaları</span></span></summary><div class="accordion-body"><div class="subgrid" id="economicMetrics"></div></div></details><details class="accordion drawer-records"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h1M3 12h1M3 18h1"/></svg> Yakıt kayıtları</span><span class="drawer-subtitle">Dolum geçmişi ve yıllık istatistikler</span></span><span class="badge" id="badgeRecords" hidden></span></summary><div class="accordion-body"><div id="recordAlerts" class="alert-list"></div><section class="panel section"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center"><h2 style="margin:0">Yakıt kayıtları <span id="count" class="muted"></span></h2><select id="yearFilter" style="width:auto"><option value="all">Tüm yıllar</option></select></div><div id="yearSummary" class="year-summary" aria-live="polite"></div><div id="rows" class="fuel-cards" aria-live="polite"></div></section></div></details><details class="accordion" id="actions"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m9.8 2.8-.5 2-2 .9-1.8-1-2.8 2.8 1 1.8-.9 2-2 .5v4l2 .5.9 2-1 1.8 2.8 2.8 1.8-1 2 .9.5 2h4l.5-2 2-.9 1.8 1 2.8-2.8-1-1.8.9-2 2-.5v-4l-2-.5-.9-2 1-1.8-2.8-2.8-1.8 1-2-.9-.5-2z" transform="translate(1.5 0) scale(.88)"/></svg> İşlevler</span><span class="drawer-subtitle">Yapay zekâ, gösterge koruma ve yedekleme</span></span><span class="badge" id="badgeActions" hidden></span></summary><div class="accordion-body"><details class="tool-help"><summary>ⓘ İşlevler hakkında</summary><div class="tool-help-content"><p>Yapay Zekâ Ayarları, Gösterge Koruma, yazı boyutu ve JSON/CSV işlemleri bu bölümde bulunur.</p></div></details><section aria-label="Yazı boyutu ayarı"><div class="font-size-label">🔎 Yazı Boyutu</div><div class="font-size-controls" role="group" aria-label="Yazı boyutu"><button type="button" data-font-step="down" aria-label="Yazıyı küçült" title="Yazıyı küçült">↓</button><button type="button" data-font-reset="true" aria-label="Varsayılan yazı boyutuna dön" title="Varsayılan boyut">Varsayılan</button><button type="button" data-font-step="up" aria-label="Yazıyı büyüt" title="Yazıyı büyüt">↑</button></div></section><details class="accordion tools-drawer" id="aiSettingsDrawer"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a4 4 0 0 0-7 2 4 4 0 0 0-1 7 4 4 0 0 0 4 5 4 4 0 0 0 4-3V5Zm0 0a4 4 0 0 1 7 2 4 4 0 0 1 1 7 4 4 0 0 1-4 5 4 4 0 0 1-4-3M8 10l2 2m-4 2 2 1m8-5-2 2m4 2-2 1"/></svg> Yapay Zekâ Ayarları</span><span class="drawer-subtitle">Sağlayıcı, model ve API anahtarları</span></span></summary><div class="accordion-body"><section class="ai-settings"><h3>🤖 Yapay Zekâ Ayarları</h3><p class="tool-safety-line">API anahtarları JSON yedeğine eklenmez.</p><details class="tool-help"><summary>ⓘ API anahtarları hakkında</summary><div class="tool-help-content"><p>Her sağlayıcının anahtarı ayrı saklanır. Aynı site ve tarayıcıda sürüm güncellense de korunur; Opera ve Chrome ayrı depolar kullanır.</p></div></details><label for="aiProvider">Görüntü işleme sağlayıcısı</label><select id="aiProvider"><option value="gemini">Gemini (varsayılan)</option><option value="groq">Groq (ücretsiz kota)</option><option value="openrouter">OpenRouter (yalnızca :free)</option></select><label for="aiApiKey" id="aiKeyLabel">Gemini API anahtarı</label><input id="aiApiKey" type="password" autocomplete="off" placeholder="API anahtarınızı yapıştırın"><label for="aiModel" id="aiModelLabel">Görüntü modeli</label><select id="aiModel"><option value="">Otomatik — erişilebilir modeli bul</option></select><button type="button" id="aiRefreshModels" style="width:100%;margin:0 0 10px">↻ MODELLERİ GÜNCELLE</button><p class="smallnote" id="aiModelInfo">Modellerin görüntü ve ücretsiz kullanım koşulları sağlayıcıya göre değişebilir.</p><div class="ai-setting-buttons"><button type="button" class="primary" id="aiSave">ANAHTARI KAYDET</button><button type="button" id="aiTest">BAĞLANTIYI TEST ET</button><button type="button" id="aiDelete">ANAHTARI SİL</button></div><p class="smallnote" id="aiSettingsStatus" role="status"></p><details class="tool-help"><summary>ⓘ Tarama, ücretlendirme ve güvenlik</summary><div class="tool-help-content"><p>Tarama görüntüsü yalnızca tarama başlatıldığında seçilen sağlayıcıya gönderilir. Ücretsiz kota ve model desteği sağlayıcıya ve hesabınıza bağlıdır. Gemini ve Groq model listesi ücretsizliği garanti etmez; OpenRouter yalnızca :free modelleri sunar. Anahtarın tarayıcıda saklanması sunucu tarafında saklamak kadar güvenli değildir.</p></div></details></section></div></details><details class="counter-protection-drawer" id="counterProtection"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3 9 8 11 5-2 8-6 8-11V5l-8-3Z"/><path d="m8.5 12 2.5 2.5 5-5"/></svg> Gösterge Koruma</span><span class="drawer-subtitle">Sıfırlama dönemleri ve birikimli sayaçlar</span></span></summary><div class="counter-protection-content"><div id="activeCounterCard" aria-live="polite">Henüz sayaç kaydı yok.</div><details id="counterArchive"><summary>📁 Geçmiş Sıfırlamalar (<span id="counterArchiveCount">0</span>)</summary><div id="counterArchiveCards"></div><div class="counter-page-controls"><button type="button" id="counterPrevPage">← Önceki</button><span id="counterPageLabel"></span><button type="button" id="counterNextPage">Sonraki →</button></div></details><p class="tool-safety-line">Bilinmeyen mesafe ve süre tahmin edilmez.</p><details class="tool-help"><summary>ⓘ Sayaç dönemleri nasıl korunur?</summary><div class="tool-help-content"><p>Sıfırlama onaylandığında önceki kart sabitlenir, yeni kart birikimli değerlerden devam eder.</p></div></details><button type="button" id="newResetPeriod">＋ Sayaç sıfırlamasını bildir</button><p class="smallnote" id="lastCounterReading">Son sayaç değerleri: kayıt bekleniyor.</p></div></details><div id="actionAlerts" class="alert-list"></div><details class="accordion tools-drawer" id="backupDrawer"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg> JSON Yedekleme ve CSV</span><span class="drawer-subtitle">Kayıtları saklayın, içe veya dışa aktarın</span></span></summary><div class="accordion-body"><div class="toolbar"><label class="filelabel" for="importFile" style="margin:0;color:#e9f2ff">↑ JSON içe aktar</label><input type="file" id="importFile" accept=".json,application/json" class="hidden"><button id="exportBtn" class="primary">↓ JSON yedekle</button><button id="csvBtn">↓ CSV aktar</button></div><p class="tool-safety-line">Tarayıcı verilerini temizlemeden önce mutlaka JSON yedeği alın.</p><details class="tool-help"><summary>ⓘ Yedek dosyası ve sıralama</summary><div class="tool-help-content"><p>Yedek dosyası adı: YYYY-AA-GG_SS-DD_Vito_Yakit_Yedek.json. En yeni yedeği üstte görmek için dosyaları ada göre Z–A sıralayın.</p></div></details></div></details></div></details><details class="footer-help"><summary>ⓘ Hesaplama ve veri güvenliği hakkında</summary><p>Hesaplama: Depo her dolumda tam doldurulmuş kabul edilir. İlk dolum başlangıç kaydıdır; tüketim hesabına alınmaz. Dönem karşılaştırmaları dolum tarihlerine göre yapılır; bu nedenle ay sonunu aşan sürüşler dolumun gerçekleştiği aya yazılır. Yakıt kayıtları cihazda tutulur. YZ taraması seçildiğinde görüntü, seçilen yapay zekâ sağlayıcısına gönderilir.</p></details></main>
+<details class="accordion drawer-cost"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="15" rx="2"/><path d="M3 10h18M16 15h2M6 6V4h12"/></svg> Maliyet</span><span class="drawer-subtitle">Gerçek ödeme ve fiyat karşılaştırmaları</span></span></summary><div class="accordion-body"><div class="subgrid" id="economicMetrics"></div></div></details><details class="accordion drawer-records"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h1M3 12h1M3 18h1"/></svg> Yakıt kayıtları</span><span class="drawer-subtitle">Dolum geçmişi ve yıllık istatistikler</span></span><span class="badge" id="badgeRecords" hidden></span></summary><div class="accordion-body"><div id="recordAlerts" class="alert-list"></div><section class="panel section"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center"><h2 style="margin:0">Yakıt kayıtları <span id="count" class="muted"></span></h2><select id="yearFilter" style="width:auto"><option value="all">Tüm yıllar</option></select></div><div id="yearSummary" class="year-summary" aria-live="polite"></div><div id="rows" class="fuel-cards" aria-live="polite"></div></section></div></details><details class="accordion" id="actions"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m9.8 2.8-.5 2-2 .9-1.8-1-2.8 2.8 1 1.8-.9 2-2 .5v4l2 .5.9 2-1 1.8 2.8 2.8 1.8-1 2 .9.5 2h4l.5-2 2-.9 1.8 1 2.8-2.8-1-1.8.9-2 2-.5v-4l-2-.5-.9-2 1-1.8-2.8-2.8-1.8 1-2-.9-.5-2z" transform="translate(1.5 0) scale(.88)"/></svg> İşlevler</span><span class="drawer-subtitle">Yapay zekâ, gösterge koruma ve yedekleme</span></span><span class="badge" id="badgeActions" hidden></span></summary><div class="accordion-body"><details class="tool-help"><summary>ⓘ İşlevler hakkında</summary><div class="tool-help-content"><p>Yapay Zekâ Ayarları, Gösterge Koruma, yazı boyutu ve JSON/CSV işlemleri bu bölümde bulunur.</p></div></details><section aria-label="Yazı boyutu ayarı"><div class="font-size-label">🔎 Yazı Boyutu</div><div class="font-size-controls" role="group" aria-label="Yazı boyutu"><button type="button" data-font-step="down" aria-label="Yazıyı küçült" title="Yazıyı küçült">↓</button><button type="button" data-font-reset="true" aria-label="Varsayılan yazı boyutuna dön" title="Varsayılan boyut">Varsayılan</button><button type="button" data-font-step="up" aria-label="Yazıyı büyüt" title="Yazıyı büyüt">↑</button></div></section><details class="accordion tools-drawer" id="aiSettingsDrawer"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a4 4 0 0 0-7 2 4 4 0 0 0-1 7 4 4 0 0 0 4 5 4 4 0 0 0 4-3V5Zm0 0a4 4 0 0 1 7 2 4 4 0 0 1 1 7 4 4 0 0 1-4 5 4 4 0 0 1-4-3M8 10l2 2m-4 2 2 1m8-5-2 2m4 2-2 1"/></svg> Yapay Zekâ Ayarları</span><span class="drawer-subtitle">Sağlayıcı, model ve API anahtarları</span></span></summary><div class="accordion-body"><section class="ai-settings"><h3>🤖 Yapay Zekâ Ayarları</h3><p class="tool-safety-line">API anahtarları JSON yedeğine eklenmez.</p><details class="tool-help"><summary>ⓘ API anahtarları hakkında</summary><div class="tool-help-content"><p>Her sağlayıcının anahtarı ayrı saklanır. Aynı site ve tarayıcıda sürüm güncellense de korunur; Opera ve Chrome ayrı depolar kullanır.</p></div></details><label for="aiProvider">Görüntü işleme sağlayıcısı</label><select id="aiProvider"><option value="gemini">Gemini (varsayılan)</option><option value="groq">Groq (ücretsiz kota)</option><option value="openrouter">OpenRouter (yalnızca :free)</option></select><label for="aiApiKey" id="aiKeyLabel">Gemini API anahtarı</label><input id="aiApiKey" type="password" autocomplete="off" placeholder="API anahtarınızı yapıştırın"><label for="aiModel" id="aiModelLabel">Görüntü modeli</label><select id="aiModel"><option value="">Otomatik — erişilebilir modeli bul</option></select><button type="button" id="aiRefreshModels" style="width:100%;margin:0 0 10px">↻ MODELLERİ GÜNCELLE</button><p class="smallnote" id="aiModelInfo">Modellerin görüntü ve ücretsiz kullanım koşulları sağlayıcıya göre değişebilir.</p><div class="ai-setting-buttons"><button type="button" class="primary" id="aiSave">ANAHTARI KAYDET</button><button type="button" id="aiTest">BAĞLANTIYI TEST ET</button><button type="button" id="aiDelete">ANAHTARI SİL</button></div><p class="smallnote" id="aiSettingsStatus" role="status"></p><details class="tool-help ai-beginner-guide" id="aiBeginnerGuide"><summary>ⓘ API nasıl alınır? Ücretsiz tarama başlangıç rehberi</summary><div class="tool-help-content">
+<p class="ai-guide-lead"><strong>İlk kez kullananlar için:</strong> Yapay zekâ API'si, telefonunuzun kilometre göstergesini ve yakıt fişini fotoğraftan okumak için kullanılan bir hizmettir. <strong>API anahtarı</strong>, bu hizmete bağlanmanızı sağlayan kişisel erişim kodudur. Yazılımın kendisi için abonelik gerekmez; sağlayıcının <strong>ücretsiz planında ve ücretsiz modeliyle</strong> kota içinde tarama yapabilirsiniz.</p>
+<div class="ai-guide-notice"><strong>Önemli: “Ücretsiz” sınırsız demek değildir.</strong> Ücretsiz modellerde istek ve hız sınırları vardır. Bazı modeller ücretlidir; yalnızca “ücretsiz / Free” olduğu doğrulanan modeli seçin. Ücretli plana geçmeyin veya ödeme yöntemi eklemeyin. Kota dolunca tarama geçici olarak durabilir; bu, otomatik ödeme yapılacağı anlamına gelmez.</div>
+<h4>Başlangıç: 7 adımda ilk fotoğraf taraması</h4>
+<ol>
+<li>Aşağıdaki üç sağlayıcıdan birinin resmî bağlantısını açın ve ücretsiz hesap oluşturun veya hesabınıza girin.</li>
+<li>Sağlayıcının <strong>API Keys / API Anahtarları</strong> bölümünden yeni bir anahtar oluşturun. Anahtarı <strong>bir kez kopyalayın</strong>; kimseyle paylaşmayın.</li>
+<li>Bu ekrandaki <strong>Görüntü işleme sağlayıcısı</strong> listesinden aynı hizmeti seçin.</li>
+<li>Anahtarı <strong>API anahtarı</strong> kutusuna yapıştırın ve <strong>MODELLERİ GÜNCELLE</strong> düğmesine dokunun.</li>
+<li>Listeden <strong>görüntü okuyabilen ve ücretsiz olduğu doğrulanmış</strong> bir model seçin. Modelin sadece listede olması, ücretsiz veya fotoğraf uyumlu olduğu anlamına gelmez.</li>
+<li><strong>ANAHTARI KAYDET</strong> ve ardından <strong>BAĞLANTIYI TEST ET</strong> düğmesine dokunun. Bağlantı testi anahtarı sınar; fotoğraf okumanın kesin başarılı olacağını garanti etmez.</li>
+<li><strong>Yeni Kayıt</strong> bölümünden kilometre göstergesi veya fiş fotoğrafıyla ilk taramayı deneyin. Okunan rakamları <strong>kaydetmeden önce mutlaka kontrol edin.</strong></li>
+</ol>
+<h4>1 · Google Gemini — Ücretsiz başlangıç</h4>
+<ol>
+<li><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio — API anahtarı oluştur</a> adresini açın; Google hesabınızla giriş yapın.</li>
+<li>API Keys sayfasındaki <strong>Create API key / API anahtarı oluştur</strong> seçeneğini kullanın. Google proje seçmenizi isteyebilir.</li>
+<li>Ücretsiz katmandaki, <strong>görüntü girişi destekleyen</strong> bir Gemini modeli seçin. Ücretsiz erişim modele, hesaba ve bölgeye göre değişebilir.</li>
+<li>Uygulamada Gemini'yi seçin, anahtarı yapıştırın, modelleri güncelleyin; ücretsiz modeli seçip kaydedin ve test edin.</li>
+</ol>
+<p><strong>Ücretlendirme:</strong> Gemini'nin <strong>Free</strong> katmanında desteklenen modellerin giriş ve çıkış işlemleri, belirtilen ücretsiz kotalar içinde ücretsizdir. <strong>Paid / faturalandırma</strong> katmanına geçiş ayrı bir işlemdir; ücretsiz kullanım için ücretli katmana geçmeniz gerekmez. Ücretsiz katmanda işlenen içerikler Google tarafından ürün geliştirme amacıyla kullanılabilir. <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Resmî ücretsiz/ücretli model koşulları</a>.</p>
+<h4>2 · Groq — Free plan</h4>
+<ol>
+<li><a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">GroqCloud — API Keys</a> sayfasına gidin ve hesabınızla giriş yapın.</li>
+<li><strong>Create API Key</strong> ile anahtar oluşturup kopyalayın.</li>
+<li>Uygulamada <strong>Groq</strong> seçin; anahtarı yapıştırın ve modelleri güncelleyin.</li>
+<li>Seçeceğiniz modelin <strong>görüntü (vision / image input)</strong> desteklediğini Groq model açıklamasından kontrol edin. Yalnızca metin modeli fiş fotoğrafını okuyamaz.</li>
+<li>Ücretsiz planınızda kullanılabilen modeli seçip kaydedin, bağlantıyı ve fotoğrafı test edin.</li>
+</ol>
+<p><strong>Ücretlendirme:</strong> Groq'un Free planında <strong>hesabınız ve modeliniz için belirtilen ücretsiz hız/günlük kotalar</strong> dahilinde API isteği gönderebilirsiniz. Kota model bazında değişir; dolduğunda genellikle sınır hatası alınır. Ücretli kullanım için ayrıca ücretli hesaba geçiş gerekir. <a href="https://console.groq.com/docs/rate-limits" target="_blank" rel="noopener noreferrer">Resmî Groq kota tablosu</a>.</p>
+<h4>3 · OpenRouter — :free modeller</h4>
+<ol>
+<li><a href="https://openrouter.ai/keys" target="_blank" rel="noopener noreferrer">OpenRouter — API Keys</a> sayfasında ücretsiz hesap açın ve bir anahtar oluşturun.</li>
+<li>Uygulamada <strong>OpenRouter</strong> seçin, anahtarı yapıştırın ve modelleri güncelleyin.</li>
+<li>Yalnızca adının sonunda <strong><code>:free</code></strong> bulunan ve <strong>fotoğraf/görüntü girişi destekleyen</strong> modeller listelenir. Uygun bir model seçin.</li>
+<li><strong>ANAHTARI KAYDET</strong> ve <strong>BAĞLANTIYI TEST ET</strong> adımlarını tamamlayın; sonra fotoğraf tarayın.</li>
+</ol>
+<p><strong>Ücretlendirme:</strong> <code>:free</code> modellerinin model kullanım bedeli <strong>0 ABD dolarıdır</strong>. Ücretsiz hesaplarda resmî kaynakta <strong>günde 50, dakikada 20 istek</strong> sınırı belirtiliyor; başarısız denemeler de günlük kotadan düşebilir. Bu limitler zamanla değişebilir. <strong>Ücretsiz kullanım için kredi satın almak veya kart tanımlamak gerekmez.</strong> <a href="https://openrouter.ai/collections/free-models" target="_blank" rel="noopener noreferrer">Resmî ücretsiz modeller ve güncel kotalar</a>.</p>
+<h4>Çalışmazsa ne yapmalıyım?</h4>
+<p><strong>401 / 403:</strong> Yanlış, iptal edilmiş ya da yetkisiz anahtar olabilir; sağlayıcınızla eşleştiğini kontrol edin. <strong>429:</strong> Ücretsiz kota veya hız sınırı dolmuş olabilir; bir süre sonra tekrar deneyin. <strong>Model bulunamadı:</strong> MODELLERİ GÜNCELLE ile güncel ve görüntü destekli ücretsiz modeli yeniden seçin. <strong>Bağlantı testi geçti ama fotoğraf okunmadı:</strong> Model görüntüyü desteklemiyor olabilir; farklı ücretsiz görüntü modeli seçin veya fotoğrafı netleştirin.</p>
+<h4>API anahtarını nasıl korurum?</h4>
+<p>Anahtarınızı GitHub'daki HTML dosyasına, ekran görüntüsüne veya JSON yedeğine yazmayın; başka kişilere göndermeyin. Anahtar bu uygulamada <strong>tarayıcının yerel depolamasında</strong> tutulur, cihazlar arasında otomatik paylaşılmaz. Ortak bilgisayarda kullanmayın. Gizli pencerede kaydedilen anahtar pencere kapatılınca kaybolabilir. Anahtarınızın açığa çıktığından şüphelenirseniz sağlayıcı sitesinden iptal edip yenisini oluşturun. Tarama sırasında fotoğraf seçtiğiniz sağlayıcının sunucusuna gönderilir.</p>
+<p class="ai-guide-updated">Bilgilendirme: Kasım 2026 · Sağlayıcıların ücretsiz koşulları, modelleri ve kotaları zamanla değişebilir; işlemden önce bağlantılardaki güncel koşulları kontrol edin.</p>
+</div></details><details class="tool-help"><summary>ⓘ Tarama, ücretlendirme ve güvenlik</summary><div class="tool-help-content"><p>Tarama görüntüsü yalnızca tarama başlatıldığında seçilen sağlayıcıya gönderilir. Ücretsiz kota ve model desteği sağlayıcıya ve hesabınıza bağlıdır. Gemini ve Groq model listesi ücretsizliği garanti etmez; OpenRouter yalnızca :free modelleri sunar. Anahtarın tarayıcıda saklanması sunucu tarafında saklamak kadar güvenli değildir.</p></div></details></section></div></details><details class="counter-protection-drawer" id="counterProtection"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3 9 8 11 5-2 8-6 8-11V5l-8-3Z"/><path d="m8.5 12 2.5 2.5 5-5"/></svg> Gösterge Koruma</span><span class="drawer-subtitle">Sıfırlama dönemleri ve birikimli sayaçlar</span></span></summary><div class="counter-protection-content"><div id="activeCounterCard" aria-live="polite">Henüz sayaç kaydı yok.</div><details id="counterArchive"><summary>📁 Geçmiş Sıfırlamalar (<span id="counterArchiveCount">0</span>)</summary><div id="counterArchiveCards"></div><div class="counter-page-controls"><button type="button" id="counterPrevPage">← Önceki</button><span id="counterPageLabel"></span><button type="button" id="counterNextPage">Sonraki →</button></div></details><p class="tool-safety-line">Bilinmeyen mesafe ve süre tahmin edilmez.</p><details class="tool-help"><summary>ⓘ Sayaç dönemleri nasıl korunur?</summary><div class="tool-help-content"><p>Sıfırlama onaylandığında önceki kart sabitlenir, yeni kart birikimli değerlerden devam eder.</p></div></details><button type="button" id="newResetPeriod">＋ Sayaç sıfırlamasını bildir</button><p class="smallnote" id="lastCounterReading">Son sayaç değerleri: kayıt bekleniyor.</p></div></details><div id="actionAlerts" class="alert-list"></div><details class="accordion tools-drawer" id="backupDrawer"><summary><span class="drawer-heading"><span class="drawer-title"><svg class="vito-svg-icon" viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg> JSON Yedekleme ve CSV</span><span class="drawer-subtitle">Kayıtları saklayın, içe veya dışa aktarın</span></span></summary><div class="accordion-body"><div class="toolbar"><label class="filelabel" for="importFile" style="margin:0;color:#e9f2ff">↑ JSON içe aktar</label><input type="file" id="importFile" accept=".json,application/json" class="hidden"><button id="exportBtn" class="primary">↓ JSON yedekle</button><button id="csvBtn">↓ CSV aktar</button></div><p class="tool-safety-line">Tarayıcı verilerini temizlemeden önce mutlaka JSON yedeği alın.</p><details class="tool-help"><summary>ⓘ Yedek dosyası ve sıralama</summary><div class="tool-help-content"><p>Yedek dosyası adı: YYYY-AA-GG_SS-DD_Vito_Yakit_Yedek.json. En yeni yedeği üstte görmek için dosyaları ada göre Z–A sıralayın.</p></div></details></div></details></div></details><details class="footer-help"><summary>ⓘ Hesaplama ve veri güvenliği hakkında</summary><p>Hesaplama: Depo her dolumda tam doldurulmuş kabul edilir. İlk dolum başlangıç kaydıdır; tüketim hesabına alınmaz. Dönem karşılaştırmaları dolum tarihlerine göre yapılır; bu nedenle ay sonunu aşan sürüşler dolumun gerçekleştiği aya yazılır. Yakıt kayıtları cihazda tutulur. YZ taraması seçildiğinde görüntü, seçilen yapay zekâ sağlayıcısına gönderilir.</p></details></main>
 <div id="vitoRecordConfirm" hidden role="presentation">
  <div class="vito-record-confirm-panel" role="dialog" aria-modal="true" aria-labelledby="vitoRecordConfirmTitle" aria-describedby="vitoRecordConfirmText">
   <h3 id="vitoRecordConfirmTitle">Kayıt işlemi</h3>
@@ -1182,7 +1238,7 @@ function renderTrend(data){
  const values=entries.map(x=>price?x.price:x.consumption);
  const labels=entries.map(x=>String(data.findIndex(z=>z.id===x.id)+1)+'.');
  const extra=entries.map(x=>price?fmt(x.liters,1)+' L':fmt(x.distance,0)+' km');
- // V19.11: Tüketim çubukları yalnızca hemen önceki geçerli dolumla karşılaştırılır.
+ // V19.12: Tüketim çubukları yalnızca hemen önceki geçerli dolumla karşılaştırılır.
  // Mevcut ±0,20 L/100 km eşiği korunur; hesaplama ve litre fiyatı grafiği değişmez.
  const consumptionBarColors=price?null:entries.map((x,i)=>{
   const comparison=comparable(x,data[i]);
@@ -1350,7 +1406,7 @@ function motorBackupRows(){
 function intervalBars(id,values,days,unit){
  const all=derived(),entries=all.slice(1),vals=values,dd=days,labels=vals.map((_,i)=>String(i+2)+'.');
  const extra=vals.map((_,i)=>Number.isFinite(dd[i])?fmt(dd[i],0):'—');
- // V19.11: Yükseklik mesafeyi, renk yalnızca önceki doluma göre tüketim değişimini gösterir.
+ // V19.12: Yükseklik mesafeyi, renk yalnızca önceki doluma göre tüketim değişimini gösterir.
  // V19.4 Yakıt Tüketimi grafiğiyle aynı değerlendirme ve ±0,20 eşiği kullanılır.
  const colors=entries.map((x,i)=>{
   const status=previousFillColor(x,all[i]);
@@ -1363,7 +1419,7 @@ function backupFilename(){let d=new Date(),p=n=>String(n).padStart(2,'0');return
 function markBackupNeeded(){try{localStorage.removeItem('vito-alert-read-backup');localStorage.setItem('vito-backup-changes',String(Number(localStorage.getItem('vito-backup-changes')||0)+1))}catch{}updateBackupNotice()}
 function alertKey(a){return 'vito-alert-read-'+a.id}
 
-/* V19.11: Bütün açıklamalar ortak, ekrana sabit pencereyi kullanır. */
+/* V19.12: Bütün açıklamalar ortak, ekrana sabit pencereyi kullanır. */
 const vitoMetricDescriptions=[
  'İlk dolumdan sonraki dolumlar arasında gidilen toplam mesafe.',
  'İlk dolum hariç; toplam yakıtın toplam mesafeye göre ağırlıklı tüketimi.',
@@ -1552,7 +1608,7 @@ function renderDriving(data,s){
  </div>`;
 }
 [['showConsumption','trend','consumption'],['showPrice','trend','price'],['yearLiters','year','liters'],['yearCost','year','cost'],['monthLiters','month','liters'],['monthCost','month','cost']].forEach(([id,key,mode])=>{$(id).addEventListener('click',()=>{chartMode[key]=mode;render()})});
-/* V19.11: Ana ve İşlevler alt çekmecelerinde yumuşak kaydırma.
+/* V19.12: Ana ve İşlevler alt çekmecelerinde yumuşak kaydırma.
    Kullanıcı başlığa/X'e basarak kapatırsa sayfanın tepesine yumuşak dön.
    Otomatik kapanan diğer çekmeceler kaydırmayı tetiklemez. */
 let accordionScrollSequence=0;
@@ -1617,7 +1673,7 @@ document.addEventListener('toggle',e=>{
  // Konuma otomatik kaydırma yalnızca en üst düzey ana çekmecelere uygulanır.
  if(isNavigableDrawer(opened))alignOpenedDrawer(opened);
 },true);
-/* V19.11: Dolum kayıtlarında tek açık kart ve konuma duyarlı kaydırma.
+/* V19.12: Dolum kayıtlarında tek açık kart ve konuma duyarlı kaydırma.
    Kayıt A açıkken B açılırsa A sessizce kapanır. B'nin ekrandaki konumu
    düzen değişiminde korunur, ardından B başlığına yumuşakça gidilir.
    B elle kapatılınca açılmadan önceki liste konumuna geri dönülür. */
@@ -1761,7 +1817,7 @@ fuelRecordObserver.observe(rowsForNavigation,{childList:true});
  // Touch/keyboard activation from native summary also cancelled through click handler.
 })();
 </script><script>
-/* V19.11 — Araç profili düzenleyicisi; JSON veri modeli korunur */
+/* V19.12 — Araç profili düzenleyicisi; JSON veri modeli korunur */
 (function(){
 'use strict';
 const KEY='vito-arac-profili-json-v1', byId=id=>document.getElementById(id);
@@ -1969,7 +2025,7 @@ upload.addEventListener('change',async()=>{
 });
 })();
 </script><script>
-/* V19.11 — Ana bölümlerde canlı yer değiştirme ve yumuşak FLIP animasyonu. */
+/* V19.12 — Ana bölümlerde canlı yer değiştirme ve yumuşak FLIP animasyonu. */
 (function(){'use strict';
 const main=document.querySelector('main');if(!main)return;
 const KEY='vito-main-section-order-v1';
